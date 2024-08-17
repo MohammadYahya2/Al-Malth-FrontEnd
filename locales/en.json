@@ -1,0 +1,138 @@
+{
+    "navbar": {
+        "brand": "Al-Malaz",
+        "services": "Services",
+        "about": "About",
+        "team": "Team",
+        "map": "Map",
+        "user": "User",
+        "profile": "Profile",
+        "settings": "Settings",
+        "logout": "Logout",
+        "contact_us": "Contact Us",
+        "languages": "Languages"
+    },
+    "intro": {
+        "lead_in": "Al-Malaz",
+        "welcome": "Welcome to Al-Malaz Law Office",
+        "heading": "We are here to protect your rights and defend your interests",
+        "btn_view_services": "View Our Services"
+    },
+    "news": {
+        "header": "News",
+        "card1": {
+            "tag": "Law",
+            "title": "Important Legal Updates in Privacy",
+            "description": "The Supreme Court recently issued decisions significantly affecting privacy laws and personal data protection.",
+            "read_more": "Read More",
+            "time": "2 hours ago"
+        },
+        "card2": {
+            "tag": "Popular",
+            "title": "Strategies to Reduce Professional Stress",
+            "description": "Learn about the best ways to handle stress and anxiety related to your professional future.",
+            "read_more": "Read More",
+            "time": "Yesterday"
+        },
+        "card3": {
+            "tag": "Tips",
+            "title": "Best Practices to Improve Your Efficiency as a Lawyer",
+            "description": "Practical tips to enhance your skills and increase your professional performance as a lawyer.",
+            "read_more": "Read More",
+            "time": "A week ago"
+        }
+    },
+    "services": {
+        "title": "Our Services",
+        "description": "We offer a variety of legal services to meet your needs.",
+        "legal_advice": {
+            "title": "Legal Advice",
+            "description": "We provide specialized legal advice to help you make the right decisions."
+        },
+        "review_contracts": {
+            "title": "Contract Review",
+            "description": "We review and prepare contracts to ensure your rights are protected and legal disputes are avoided."
+        },
+        "legal_pleadings": {
+            "title": "Legal Pleadings",
+            "description": "We have extensive experience representing clients in court and defending their rights."
+        },
+        "read_more": "Read More"
+    },
+    "contact": {
+        "heading": "Contact Us",
+        "subheading": "Placeholder text for displaying content"
+    },
+    "footer": {
+        "find_us": "Find Us",
+        "call_us": "Call Us",
+        "mail_us": "Mail Us",
+        "subscribe": "Subscribe",
+        "subscribe_description": "Don't miss subscribing to our new feeds, please fill out the form below.",
+        "useful_links": "Useful Links",
+        "home": "Home",
+        "about_us": "About Us",
+        "our_services": "Our Services",
+        "expert_team": "Expert Team",
+        "latest_news": "Latest News"
+    },
+    "legal_support": {
+        "heading": "Al-Malaz Law Office",
+        "description": "We provide our clients with comprehensive legal support to achieve legal security and stability, legal support before disputes arise, and settlement of international disputes that may arise in law, work, or any contractual relationship before the judicial authorities through a legal team with experience and competence to achieve that."
+    },
+    "about": {
+        "title": "About Al-Malaz Law Office",
+        "description": "We are honored to present our achievements and our rich history in providing integrated legal services.",
+        "milestone1": {
+            "year": "2010",
+            "title": "Office Establishment",
+            "description": "In 2010, Al-Malaz Law Office was established with the aim of providing integrated and reliable legal services to our clients."
+        },
+        "milestone2": {
+            "year": "2012",
+            "title": "Expansion of Services",
+            "description": "In 2012, we expanded our services to include new legal fields such as commercial and criminal cases."
+        },
+        "milestone3": {
+            "year": "2015",
+            "title": "Winning Legal Awards",
+            "description": "In 2015, we received awards from several entities for our excellence in providing legal advice and customer service."
+        },
+        "milestone4": {
+            "year": "2018",
+            "title": "Expansion to New Offices",
+            "description": "In 2018, we opened new offices in several cities to meet the needs of our clients in different locations."
+        },
+        "join_us": "Be Part of Our Story!"
+    },
+    "team": {
+        "title": "Yousef Abu Al-Sa’a",
+        "subtitle": "Company Director and Civil Cases Specialist Lawyer",
+        "members": [
+            {
+                "name": "Yousef Abu Al-Sa’a",
+                "role": "Company Director and Civil Cases Specialist Lawyer",
+                "image": "S2YorKAWR1KK2yBt3Hvebw.jpeg",
+                "social": {
+                    "instagram": "https://www.instagram.com/yourprofile",
+                    "whatsapp": "https://wa.me/yourphonenumber",
+                    "telegram": "https://t.me/yourprofile"
+                },
+                "phone_number": "0595253709"
+            }
+        ],
+        "description": "At Al-Malaz Law Office, we offer you a team of specialized lawyers to ensure the best results in every case. We are here to support you and provide the legal advice you need."
+    },
+    "map": {
+        "header": "Location of Al-Malaz Office"
+    },
+    "contact": {
+        "heading": "Contact Us",
+        "subheading": "Placeholder text for displaying content",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone Number",
+        "message": "Message",
+        "send_message": "Send Message"
+    }
+}

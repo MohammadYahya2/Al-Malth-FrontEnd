@@ -1,0 +1,74 @@
+/* أنماط عامة */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: right;
+    direction: rtl;
+}
+
+.container-article {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2.5em;
+    font-family: 'Amiri', serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: 'Amiri', serif;
+    color: #007bff;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.main-image, .section-image {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.main-image {
+    display: block;
+    margin: 20px auto;
+}
+
+.section-image {
+    margin: 20px;
+}
+
+.container-article img {
+    width: 500px;
+    height:500px;
+    display: block;
+    margin: 0 auto;
+}
+.btn-primary {
+    display: block;
+    width: 100px;
+    padding: 10px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}

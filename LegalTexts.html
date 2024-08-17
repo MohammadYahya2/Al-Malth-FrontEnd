@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتب المحاماة</title>
+    <link rel="stylesheet" href="LegalTexts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <link rel="icon" href="/path/to/your/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-text">
+                <h2>Legal team to help you succeed</h2>
+                <p>Best law service</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="header-buttons">
+                    <button class="get-started">Get Started</button>
+                    <button class="learn-more">Learn more</button>
+                </div>
+            </div>
+            <div class="header-image">
+                <img src="9572796.jpg" alt="Legal Team">
+            </div>
+        </div>
+    </header>
+    
+    <nav class="animated-nav">
+        <ul>
+            <li><a href="#" data-target="legal-texts">نصوص قانونية</a></li>
+            <li><a href="#" data-target="judicial-comments">تعليق على أحكام قضائية</a></li>
+            <li><a href="#" data-target="peer-reviewed-research">نشر أبحاث محكّمة</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="legal-texts" class="active">
+            <div class="styled-header-wrapper">
+                <h2 class="styled-header">نصوص قانونية</h2>
+            </div>
+            <button class="fixed-upload-btn" onclick="toggleUploadForm('legal-texts-form')">اضغط لرفع ملفات</button>
+            <form id="legal-texts-form" class="upload-form" style="display: none;">
+                <button type="button" class="close-button" onclick="toggleUploadForm('legal-texts-form')">X</button>
+                <div class="form-group">
+                    <div class="form-image">
+                        <img src="Load more-cuate.png" alt="Load more">
+                    </div>
+                    <input type="password" id="legal-texts-password" placeholder="أدخل كلمة المرور" />
+                </div>
+                <div class="form-group">
+                    <input type="file" id="legal-texts-file" />
+                </div>
+                <button type="button" class="upload-button" onclick="uploadFile('legal-texts')">رفع الملف</button>
+            </form>
+            
+            <div id="legal-texts-uploads" class="uploaded-files-container">
+                <div id="no-files-message" class="no-files">
+                    <img src="9318707.jpg" alt="No Files">
+                    <p>لا يوجد ملفات مرفعة</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="judicial-comments">
+            <div class="styled-header-wrapper">
+                <h2 class="styled-header">تعليق على أحكام قضائية</h2>
+            </div>
+            <button class="fixed-upload-btn" onclick="toggleUploadForm('judicial-comments-form')">اضغط لرفع ملفات</button>
+            <form id="judicial-comments-form" class="upload-form" style="display: none;">
+                <button type="button" class="close-button" onclick="toggleUploadForm('judicial-comments-form')">X</button>
+                <div class="form-group">
+                    <div class="form-image">
+                        <img src="Load more-cuate.png" alt="Load more">
+                    </div>
+                    <input type="password" id="judicial-comments-password" placeholder="أدخل كلمة المرور" />
+                </div>
+                <div class="form-group">
+                    <input type="file" id="judicial-comments-file" />
+                </div>
+                <button type="button" class="upload-button" onclick="uploadFile('judicial-comments')">رفع الملف</button>
+            </form>
+            
+            <div id="judicial-comments-uploads" class="uploaded-files-container">
+                <div id="no-files-message" class="no-files">
+                    <img src="9318707.jpg" alt="No Files">
+                    <p>لا يوجد ملفات مرفعة</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="peer-reviewed-research">
+            <div class="styled-header-wrapper">
+                <h2 class="styled-header">نشر أبحاث محكّمة</h2>
+            </div>
+            <button class="fixed-upload-btn" onclick="toggleUploadForm('peer-reviewed-research-form')">اضغط لرفع ملفات</button>
+            <form id="peer-reviewed-research-form" class="upload-form" style="display: none;">
+                <button type="button" class="close-button" onclick="toggleUploadForm('peer-reviewed-research-form')">X</button>
+                <div class="form-group">
+                    <div class="form-image">
+                        <img src="Load more-cuate.png" alt="Load more">
+                    </div>
+                    <input type="password" id="peer-reviewed-research-password" placeholder="أدخل كلمة المرور" />
+                </div>
+                <div class="form-group">
+                    <input type="file" id="peer-reviewed-research-file" />
+                </div>
+                <button type="button" class="upload-button" onclick="uploadFile('peer-reviewed-research')">رفع الملف</button>
+            </form>
+            
+            <div id="peer-reviewed-research-uploads" class="uploaded-files-container">
+                <div id="no-files-message" class="no-files">
+                    <img src="9318707.jpg" alt="No Files">
+                    <p>لا يوجد ملفات مرفعة</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="LegalTexts.js"></script>
+</body>
+</html>
