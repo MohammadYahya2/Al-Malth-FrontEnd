@@ -1,13 +1,20 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
 :root {
-    --navbar-bg-color: hsl(210, 22%, 25%);
-    --navbar-text-color: hsl(0, 0%, 95%);
-    --navbar-text-color-focus: hsl(50, 85%, 60%);
-    --navbar-bg-contrast: hsl(210, 30%, 18%);
-  }
+    --navbar-bg-color: hsl(210, 15%, 20%); /* لون داكن للأزرق البحري */
+    --navbar-text-color: hsl(0, 0%, 100%); /* لون نص أبيض */
+    --navbar-text-color-focus: hsl(45, 85%, 55%); /* لون ذهبي دافئ عند التركيز */
+    --navbar-bg-contrast: hsl(210, 25%, 15%); /* لون أزرق أكثر قتامة للتمايز */
+    --primary-font: 'Lora', serif; /* تعيين Lora كخط رئيسي */
+}
+
 * {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font); /* استخدام Lora في جميع العناصر */
 }
 
 .container {
@@ -26,11 +33,13 @@ right: 0;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 .navbar-container {
-display: flex;
-justify-content: space-between;
-height: 100%;
-align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    flex-direction: row-reverse; 
 }
+
 .navbar-item {
 margin: 0.4em;
 width: 100%;
@@ -38,11 +47,12 @@ width: 100%;
 
 .home-link,
 .navbar-link {
-color: var(--navbar-text-color);
-text-decoration: none;
-display: flex;
-font-weight: 400;
-align-items: center;
+    font-family: var(--secondary-font); /* تعيين الخط الثانوي */
+    color: var(--navbar-text-color);
+    text-decoration: none;
+    display: flex;
+    font-weight: 400;
+    align-items: center;
 }
 
 .home-link:is(:focus, :hover) {
@@ -119,6 +129,7 @@ visibility: visible;
 .navbar-links {
 list-style: none;
 position: absolute;
+z-index: 1000px;
 background-color: var(--navbar-bg-color);
 display: flex;
 flex-direction: column;
@@ -159,6 +170,7 @@ padding: 1em;
     height: 100%;
 }
 }
+
 /* التنسيق الأساسي */
 .dropdown-menu {
     list-style: none;
@@ -194,6 +206,7 @@ padding: 1em;
 @media screen and (max-width: 700px) {
     .dropdown-menu {
         position: static;
+        z-index: 1000px;
         display: flex;
     }
 
