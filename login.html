@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Law Office Login and Register</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-    
-        }
-        
-        body {
-            font-family: 'Merriweather', serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #ffffff, #e2e8f0);
-            flex-direction: column;
-            background-image: url('palsad.png'); 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        /* section {
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        font-family: "Merriweather", serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #ffffff, #e2e8f0);
+        flex-direction: column;
+        background-image: url("/assets/palsad.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      /* section {
             position: relative;
             min-height: 100vh;
             background: #f8f3f5;
@@ -38,266 +43,453 @@
             align-items: center;
             padding: 20px;
         } */
+      section .container {
+        position: relative;
+        width: 800px;
+        height: 500px;
+        background: #fff;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      section .container .user {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+      section .container .user .imgBx {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        background: #3a86ff;
+        transition: 0.5s;
+      }
+      section .container .user .imgBx img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      section .container .user .formBx {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        transition: 0.5s;
+      }
+      section .container .user .formBx form h2 {
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+        color: #555;
+      }
+      section .container .user .formBx form input {
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        background: #f5f5f5;
+        color: #333;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-weight: 300;
+      }
+      section .container .user .formBx form input[type="submit"] {
+        max-width: 100px;
+        background: #0090e0;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: 0.5s;
+      }
+      section .container .user .formBx form .signup {
+        position: relative;
+        margin-top: 20px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        color: #555;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+      section .container .user .formBx form .signup a {
+        font-weight: 600;
+        text-decoration: none;
+        color: #0090e0;
+      }
+      section .container .user .formBx form .signin {
+        position: relative;
+        margin-top: 20px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        color: #555;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+      section .container .user .formBx form .signin a {
+        font-weight: 600;
+        text-decoration: none;
+        color: #ffbe0b;
+      }
+      section .container .user .formBx form input[type="submit"].btn2 {
+        background: #ffbe0b;
+      }
+
+      section .container .signupBx {
+        pointer-events: none;
+      }
+      section .container .signupBx .formBx {
+        left: 100%;
+      }
+      section .container .signupBx .imgBx {
+        left: -100%;
+      }
+      section .container.active .signupBx {
+        pointer-events: initial;
+      }
+      section .container.active .signupBx .formBx {
+        left: 0;
+      }
+      section .container.active .signupBx .imgBx {
+        left: 0;
+      }
+
+      section .container .signinBx {
+        pointer-events: initial;
+      }
+      section .container .signinBx .formBx {
+        left: 0;
+      }
+      section .container .signinBx .imgBx {
+        left: 0;
+      }
+      section .container.active .signinBx {
+        pointer-events: none;
+      }
+      section .container.active .signinBx .formBx {
+        left: -100%;
+      }
+      section .container.active .signinBx .imgBx {
+        left: 100%;
+      }
+
+      @media (max-width: 991px) {
         section .container {
-            position: relative;
-            width: 800px;
-            height: 500px;
-            background: #fff;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+          max-width: 400px;
         }
-        section .container .user {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-        }
-        section .container .user .imgBx {
-            position: relative;
-            width: 50%;
-            height: 100%;
-            background: #3a86ff;
-            transition: 0.5s;
-        }
-        section .container .user .imgBx img {
-            position: absolute;
-            top:0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        section .container .imgBx {
+          display: none;
         }
         section .container .user .formBx {
-            position: relative;
-            width: 50%;
-            height: 100%;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-            transition: 0.5s;
+          width: 100%;
         }
-        section .container .user .formBx form h2 {
-            font-size: 18px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-align: center;
-            width: 100%;
-            margin-bottom: 10px;
-            color: #555;
-        }
-        section .container .user .formBx form input {
-            position: relative;
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            background: #f5f5f5;
-            color: #333;
-            border: none;
-            outline: none;
-            box-shadow: none;
-            font-size: 15px;
-            letter-spacing: 1px;
-            font-weight: 300;
-        }
-        section .container .user .formBx form input[type="submit"] {
-            max-width: 100px;
-            background: #0090e0;
-            color: #fff;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 1px;
-            transition: 0.5s;
-        }
-        section .container .user .formBx form .signup {
-            position: relative;
-            margin-top: 20px;
-            font-size: 12px;
-            letter-spacing: 1px;
-            color: #555;
-            text-transform: uppercase;
-            font-weight: 300;
-        }
-        section .container .user .formBx form .signup a {
-            font-weight: 600;
-            text-decoration: none;
-            color: #0090e0;
-        }
-        section .container .user .formBx form .signin {
-            position: relative;
-            margin-top: 20px;
-            font-size: 12px;
-            letter-spacing: 1px;
-            color: #555;
-            text-transform: uppercase;
-            font-weight: 300;
-        }
-        section .container .user .formBx form .signin a {
-            font-weight: 600;
-            text-decoration: none;
-            color: #ffbe0b;
-        }
-        section .container .user .formBx form input[type="submit"].btn2 {
-            background: #ffbe0b;
-        }
-
-        section .container .signupBx {
-            pointer-events: none;
-        }
-        section .container .signupBx .formBx {
-            left: 100%;
-        }
-        section .container .signupBx .imgBx {
-            left: -100%;
-        }
-        section .container.active .signupBx {
-            pointer-events: initial;
-        }
-        section .container.active .signupBx .formBx {
-            left: 0;
-        }
-        section .container.active .signupBx .imgBx {
-            left: 0;
-        }
-
-        section .container .signinBx {
-            pointer-events: initial;
-        }
-        section .container .signinBx .formBx {
-            left: 0;
-        }
-        section .container .signinBx .imgBx {
-            left: 0;
-        }
-        section .container.active .signinBx {
-            pointer-events: none;
-        }
-        section .container.active .signinBx .formBx {
-            left: -100%;
-        }
-        section .container.active .signinBx .imgBx {
-            left: 100%;
-        }
-
-        @media (max-width: 991px) {
-            section .container {
-                max-width: 400px;
-            }
-            section .container .imgBx {
-                display: none;
-            }
-            section .container .user .formBx {
-                width: 100%;
-            }
-        }
-        .message {
-            color: red;
-            margin-top: 10px;
-        }
+      }
+      .message {
+        color: red;
+        margin-top: 10px;
+      }
     </style>
-</head>
-<body>
-    <section>
-        <div class="container">
-            <div class="user signinBx">
-                <div class="imgBx">
-                    <img src="assets/mia.png" alt="pic1">
-                </div>
-                <div class="formBx">
-                    <form onsubmit="login(event)">
-                        <h2>Sign In</h2>
-                        <input type="email" id="login-email" placeholder="Email" required>
-                        <input type="password" id="login-password" placeholder="Password" required>
-                        <input type="submit" value="Login">
-                        <p class="signup">Don't have an account? <a href="#" onclick="toggleForm()">Sign Up.</a></p>
-                        <div id="login-message" class="message"></div>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="user signupBx">
-                <div class="formBx">
-                    <form onsubmit="register(event)">
-                        <h2>Sign Up</h2>
-                        <input type="text" id="reg-name" placeholder="Full Name" required>
-                        <input type="email" id="reg-email" placeholder="Email" required>
-                        <input type="password" id="reg-password" placeholder="Create Password" required>
-                        <input type="submit" value="Sign Up" class="btn2">
-                        <p class="signin">You have an account? <a href="#" onclick="toggleForm()">Sign In.</a></p>
-                        <div id="reg-message" class="message"></div>
-                    </form>
-                </div>
-                <div class="imgBx">
-                    <img src="assets/oa.png" alt="pic1">
-                </div>
-            </div>
+  </head>
+  <body>
+    <!-- <section>
+      <div class="container">
+        <div class="user signinBx">
+          <div class="imgBx">
+            <img src="assets/mia.png" alt="pic1" />
+          </div>
+          <div class="formBx">
+            <form onsubmit="login(event)">
+              <h2>Sign In</h2>
+              <input
+                type="email"
+                id="login-email"
+                placeholder="Email"
+                required
+              />
+              <input
+                type="password"
+                id="login-password"
+                placeholder="Password"
+                required
+              />
+              <input type="submit" value="Login" />
+              <p class="signup">
+                Don't have an account?
+                <a href="#" onclick="toggleForm()">Sign Up.</a>
+              </p>
+              <div id="login-message" class="message"></div>
+            </form>
+          </div>
         </div>
+
+        <div class="user signupBx">
+          <div class="formBx">
+            <form onsubmit="register(event)">
+              <h2>Sign Up</h2>
+              <input
+                type="text"
+                id="reg-name"
+                placeholder="Full Name"
+                required
+              />
+              <input type="email" id="reg-email" placeholder="Email" required />
+              <input
+                type="password"
+                id="reg-password"
+                placeholder="Create Password"
+                required
+              />
+              <input type="submit" value="Sign Up" class="btn2" />
+              <p class="signin">
+                You have an account?
+                <a href="#" onclick="toggleForm()">Sign In.</a>
+              </p>
+              <div id="reg-message" class="message"></div>
+            </form>
+          </div>
+          <div class="imgBx">
+            <img src="assets/oa.png" alt="pic1" />
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section>
+      <div class="container">
+        <div class="user signinBx">
+          <div class="imgBx">
+            <img src="assets/mia.png" alt="pic1" />
+          </div>
+          <div class="formBx">
+            <form onsubmit="login(event)">
+              <h2>Sign In</h2>
+              <input
+                type="email"
+                id="login-email"
+                placeholder="Email"
+                required
+              />
+              <input
+                type="password"
+                id="login-password"
+                placeholder="Password"
+                required
+              />
+              <input type="submit" value="Login" />
+              <p class="signup">
+                Don't have an account?
+                <a href="#" onclick="toggleForm()">Sign Up.</a>
+              </p>
+              <div id="login-message" class="message"></div>
+            </form>
+          </div>
+        </div>
+
+        <div class="user signupBx">
+          <div class="formBx">
+            <form onsubmit="signup(event)">
+              <h2>Sign Up</h2>
+              <input
+                type="text"
+                id="reg-name"
+                placeholder="Full Name"
+                required
+              />
+              <input type="email" id="reg-email" placeholder="Email" required />
+              <input
+                type="password"
+                id="reg-password"
+                placeholder="Create Password"
+                required
+              />
+              <input type="submit" value="Sign Up" class="btn2" />
+              <p class="signin">
+                You have an account?
+                <a href="#" onclick="toggleForm()">Sign In.</a>
+              </p>
+              <div id="reg-message" class="message"></div>
+            </form>
+          </div>
+          <div class="imgBx">
+            <img src="assets/oa.png" alt="pic1" />
+          </div>
+        </div>
+      </div>
     </section>
-
     <script>
-        function register(event) {
-            event.preventDefault();
-            const name = document.getElementById('reg-name').value;
-            const email = document.getElementById('reg-email').value;
-            const password = document.getElementById('reg-password').value;
-            const message = document.getElementById('reg-message');
+      const emailInput = document.getElementById("reg-email");
+      const passwordInput = document.getElementById("reg-password");
+      const loginEmailInput = document.getElementById("login-email");
+      const loginPasswordInput = document.getElementById("login-password");
+      const regMessage = document.getElementById("reg-message");
+      const loginMessage = document.getElementById("login-message");
 
-            // تعبير منتظم للتحقق من صحة البريد الإلكتروني
-            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      // Regular expression to validate email
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-            if (name === '' || email === '' || password === '') {
-                message.textContent = 'Please fill in all fields';
-                return;
-            }
+      // Sign-up validations
+      emailInput.addEventListener("focusout", validateEmail);
+      emailInput.addEventListener("input", validateEmail);
+      passwordInput.addEventListener("focusout", validatePassword);
+      passwordInput.addEventListener("input", validatePassword);
 
-            if (!emailPattern.test(email)) {
-                message.textContent = 'Please enter a valid email address';
-                return;
-            }
+      function validateEmail() {
+        const email = emailInput.value;
+        if (email && !emailPattern.test(email)) {
+          regMessage.textContent = "Please enter a valid email address";
+        } else {
+          regMessage.textContent = ""; // Clear the message if valid
+        }
+      }
 
-            if (localStorage.getItem(email)) {
-                message.textContent = 'Email already exists';
+      function validatePassword() {
+        const password = passwordInput.value;
+        if (password.length > 0 && password.length < 6) {
+          regMessage.textContent =
+            "Password must be at least 6 characters long";
+        } else {
+          regMessage.textContent = ""; // Clear the message if valid
+        }
+      }
+
+      async function signup(event) {
+        event.preventDefault();
+        const name = document.getElementById("reg-name").value;
+        const email = emailInput.value;
+        const password = passwordInput.value;
+
+        // Clear previous message
+        regMessage.textContent = "";
+
+        if (name === "" || email === "" || password === "") {
+          regMessage.textContent = "Please fill in all fields";
+          return;
+        }
+
+        if (regMessage.textContent === "") {
+          try {
+            const response = await fetch("http://localhost:5001/users/signup", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ username: name, email, password }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+              regMessage.textContent = "Registration successful";
+              localStorage.setItem(
+                "currentUser",
+                JSON.stringify({
+                  token: data.token,
+                  username: data.userdata.username,
+                  id: data.userdata.userId,
+                  email: data.userdata.email,
+                })
+              );
+              window.location.href = "main.html"; // Redirect to main page
             } else {
-                const user = {
-                    name: name,
-                    password: password
-                };
-                localStorage.setItem(email, JSON.stringify(user));
-                message.textContent = 'Registration successful';
-                localStorage.setItem('currentUser', email); // حفظ البريد الإلكتروني للمستخدم الحالي
-                window.location.href = 'main.html'; // إعادة التوجيه إلى الصفحة الرئيسية
+              regMessage.textContent = data.error || "Registration failed";
             }
+          } catch (error) {
+            regMessage.textContent = "An error occurred. Please try again.";
+            console.error("Error:", error);
+          }
+        }
+      }
+
+      // Sign-in validations
+      loginEmailInput.addEventListener("focusout", validateLoginEmail);
+      loginEmailInput.addEventListener("input", validateLoginEmail);
+      loginPasswordInput.addEventListener("focusout", validateLoginPassword);
+      loginPasswordInput.addEventListener("input", validateLoginPassword);
+
+      function validateLoginEmail() {
+        const email = loginEmailInput.value;
+        if (email && !emailPattern.test(email)) {
+          loginMessage.textContent = "Please enter a valid email address";
+        } else {
+          loginMessage.textContent = ""; // Clear the message if valid
+        }
+      }
+
+      function validateLoginPassword() {
+        const password = loginPasswordInput.value;
+        if (password.length > 0 && password.length < 6) {
+          loginMessage.textContent =
+            "Password must be at least 6 characters long";
+        } else {
+          loginMessage.textContent = ""; // Clear the message if valid
+        }
+      }
+
+      async function login(event) {
+        event.preventDefault();
+        const email = loginEmailInput.value;
+        const password = loginPasswordInput.value;
+
+        loginMessage.textContent = "";
+
+        if (email === "" || password === "") {
+          loginMessage.textContent = "Please fill email and password";
+          return;
         }
 
-        function login(event) {
-            event.preventDefault();
-            const email = document.getElementById('login-email').value;
-            const password = document.getElementById('login-password').value;
-            const message = document.getElementById('login-message');
+        if (loginMessage.textContent === "") {
+          try {
+            const response = await fetch("http://localhost:5001/users/signin", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ email, password }),
+            });
 
-            if (email === '' || password === '') {
-                message.textContent = 'Please fill in all fields';
-                return;
-            }
+            const data = await response.json();
 
-            const user = JSON.parse(localStorage.getItem(email));
-            if (user && user.password === password) {
-                localStorage.setItem('currentUser', email);
-                window.location.href = 'main.html';
+            if (response.ok) {
+              loginMessage.textContent = "Registration successful";
+              localStorage.setItem(
+                "currentUser",
+                JSON.stringify({
+                  token: data.token,
+                  username: data.userdata.username,
+                  id: data.userdata.userId,
+                  email: data.userdata.email,
+                })
+              );
+              window.location.href = "main.html"; // Redirect to main page
             } else {
-                message.textContent = 'Invalid email or password';
+              loginMessage.textContent = data.error || "Registration failed";
             }
+          } catch (error) {
+            loginMessage.textContent = "An error occurred. Please try again.";
+            console.error("Error:", error);
+          }
         }
+      }
 
-        function toggleForm() {
-            var container = document.querySelector('.container');
-            container.classList.toggle('active');
-        }
+      function toggleForm() {
+        var container = document.querySelector(".container");
+        container.classList.toggle("active");
+      }
     </script>
-</body>
+  </body>
 </html>
