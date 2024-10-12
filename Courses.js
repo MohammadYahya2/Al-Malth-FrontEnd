@@ -43,7 +43,7 @@ document.getElementById("new-course-form").onsubmit = function(event) {
 var courseCard = `
 <div class="course-card">
     <div class="course-image">
-        <img src="still-life-with-scales-justice.jpg" alt="Course Thumbnail">
+        <img src="assets/still-life-with-scales-justice.jpg" alt="Course Thumbnail">
     </div>
     <div class="course-info">
         <h3>${courseTitle}</h3>

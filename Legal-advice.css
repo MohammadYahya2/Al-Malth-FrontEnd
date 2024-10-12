@@ -1168,7 +1168,7 @@ p{
     font-size: 1rem !important;
     line-height: 1.5 !important;
     border-radius: 5rem !important;
-    transition: color .15s ease-in-out !important, 
+    transition: color .15s ease-in-out !important,
                 background-color .15s ease-in-out !important, 
                 border-color .15s ease-in-out !important, 
                 box-shadow .15s ease-in-out !important;
