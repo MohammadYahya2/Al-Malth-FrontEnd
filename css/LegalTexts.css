@@ -708,6 +708,7 @@ nav.animated-nav ul li a:hover::after {
     .header-text h2 {
         font-size: 1.8rem;
         margin-bottom: 15px;
+        padding-top: 3rem;
     }
 
     .header-text p {
@@ -730,4 +731,33 @@ nav.animated-nav ul li a:hover::after {
         width: 80%; /* جعل الأزرار أعرض وأقل طولًا على الشاشات الصغيرة */
         margin-bottom: 10px;
     }
+    .nav.animated-nav{
+      padding: 10px 0;
+    }
+    .icon-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .icon-item {
+        margin-bottom: 20px; /* Add margin between each icon */
+        font-size: 1rem; /* Adjust text size for better readability */
+    }
+
+    .icon-item img {
+        width: 50px; /* Adjust icon size */
+        height: auto; /* Keep aspect ratio */
+    }
+}
+.icon-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #003366; /* Dark blue background */
+}
+
+.icon-item {
+    text-align: center;
+    color: #fff;
+    margin: 0 15px;
 }

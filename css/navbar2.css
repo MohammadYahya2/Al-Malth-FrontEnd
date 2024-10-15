@@ -1,5 +1,7 @@
 
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 
 :root {
@@ -12,8 +14,8 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 1px;
+    padding: 1px;
     font-family: var(--primary-font); /* استخدام Lora في جميع العناصر */
 }
 
@@ -37,10 +39,9 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 .navbar-container {
     display: flex;
-    justify-content: space-between;
     height: 100%;
     align-items: center;
-    flex-direction: row-reverse; /* This moves the logo to the right */
+   
 }
 
 .navbar-item {
@@ -131,8 +132,8 @@ visibility: visible;
 }
 .navbar-links {
 list-style: none;
-position: absolute;
-z-index: 1000px;
+position: fixed;
+z-index: 1000;
 background-color: var(--navbar-bg-color);
 display: flex;
 flex-direction: column;
