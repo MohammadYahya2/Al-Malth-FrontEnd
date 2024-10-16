@@ -27,7 +27,7 @@ function register() {
     localStorage.setItem(email, JSON.stringify(user));
     message.textContent = "Registration successful";
     localStorage.setItem("currentUser", email); // حفظ البريد الإلكتروني للمستخدم الحالي
-    window.location.href = "main.html"; // إعادة التوجيه إلى الصفحة الرئيسية
+    window.location.href = "/"; // إعادة التوجيه إلى الصفحة الرئيسية
   }
 }
 
@@ -44,7 +44,7 @@ function login() {
   const user = JSON.parse(localStorage.getItem(email));
   if (user && user.password === password) {
     localStorage.setItem("currentUser", email);
-    window.location.href = "main.html";
+    window.location.href = "/";
   } else {
     message.textContent = "Invalid email or password";
   }
@@ -57,7 +57,7 @@ function toggleLogin() {
     localStorage.removeItem("currentUser");
     document.getElementById("userDropdown").textContent = "User";
     document.getElementById("loginLogoutLink").textContent = "Login";
-    window.location.href = "main.html";
+    window.location.href = "/";
   } else {
     // Redirect to login page
     window.location.href = "login.html";
