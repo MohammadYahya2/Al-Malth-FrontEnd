@@ -14,8 +14,8 @@
 
 * {
     box-sizing: border-box;
-    margin: 1px;
-    padding: 1px;
+    margin: 0px;
+    padding: 0px;
     font-family: var(--primary-font); /* استخدام Lora في جميع العناصر */
 }
 
@@ -27,7 +27,7 @@ margin-left: auto;
 margin-right: auto;
 }
 #navbar {
-POSITION: FIXED;
+/* POSITION: FIXED; */
 Z-INDEX: 999;
 --navbar-height: 64px;
 height: var(--navbar-height);

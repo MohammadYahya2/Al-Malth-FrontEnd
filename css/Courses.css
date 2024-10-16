@@ -630,6 +630,7 @@ body {
     }
     
     .text-section h1 {
+        padding-top: 100px;
         font-size: 36px;
     }
 

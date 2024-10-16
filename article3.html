@@ -5,9 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أفضل الممارسات لتحسين كفاءتك كمحامي</title>
     <link rel="stylesheet" href="css/news1.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri&family=Cairo:wght@400;700&display=swap">
 </head>
 <body>
+    <header id="navbar">
+        <nav class="navbar-container container">
+            <img src="assets\ALA.PNG" alt="Logo" class="logo">
+            <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div id="navbar-menu" aria-labelledby="navbar-toggle">
+                <ul class="navbar-links">
+                    <!-- قائمة اللغات المنسدلة -->
+                    <li class="navbar-item"><a class="navbar-link" href="/home">Home</a></li>
+                    <li class="navbar-item dropdown">
+                        <a class="navbar-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Services</i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a href="/legal-services" class="dropdown-item">Legal Services</a></li>
+                            <li><a href="/translation-services" class="dropdown-item">Translation Services</a></li>
+                            <li><a href="/consulting-services" class="dropdown-item">Consulting Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item dropdown">
+                        
+                        <a class="navbar-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Languages <i class="fas fa-globe"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a href="#" class="dropdown-item" onclick="changeLanguage('ar')">Arabic</a></li>
+                            <li><a href="#" class="dropdown-item" onclick="changeLanguage('en')">English</a></li>
+                        </ul>
+                        
+                        
+                    </li>
+                    <!-- قائمة الخدمات المنسدلة -->
+                    
+                    <li class="navbar-item"><a class="navbar-link" href="/contact">Contact Us</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
     <div class="container-article">
         <h2>أفضل الممارسات لتحسين كفاءتك كمحامي</h2>
         <img src="assets/a1.png" alt="صورة للمقال" class="main-image">
@@ -28,5 +71,6 @@
         <p>في الختام، تحسين كفاءتك كمحامي يتطلب الالتزام بتطوير مهاراتك والاستفادة من أفضل الممارسات. من خلال اتباع النصائح المذكورة، يمكنك تحقيق نجاح أكبر في مسيرتك المهنية.</p>
     </div>
     <a href="main.html" class="btn btn-primary">الرجوع</a>
+    <script src="navbar.js"></script> 
 </body>
 </html>

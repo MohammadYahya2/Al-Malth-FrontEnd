@@ -1,0 +1,96 @@
+section#contact {
+    background-color: #222;
+    background-image: url('../assets/photorealistic-lifestyle-judge.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+    color: #fff;
+    text-align: center;
+}
+
+section#contact .section-heading {
+    color: #ffd505;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+section#contact .section-heading::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #ffd505;
+    margin: 10px auto 0;
+    transition: width 0.3s;
+}
+
+section#contact .section-heading:hover::after {
+    width: 100px;
+}
+
+section#contact .form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+section#contact .form-group input,
+section#contact .form-group textarea {
+    padding: 20px;
+    background-color: rgb(255, 236, 236);
+    border: 1px solid #000;
+    color: #000;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+section#contact .form-group input.form-control {
+    height: auto;
+}
+
+section#contact .form-group textarea.form-control {
+    height: 236px;
+}
+
+section#contact .form-group input.form-control:focus,
+section#contact .form-group textarea.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.693);
+    border-color: #ffd505;
+}
+
+section#contact .form-group input.form-control::placeholder,
+section#contact .form-group textarea.form-control::placeholder,
+section#contact .form-group input.form-control::-webkit-input-placeholder,
+section#contact .form-group textarea.form-control::-webkit-input-placeholder,
+section#contact .form-group input.form-control:-moz-placeholder,
+section#contact .form-group textarea.form-control:-moz-placeholder,
+section#contact .form-group input.form-control::-moz-placeholder,
+section#contact .form-group textarea.form-control::-moz-placeholder,
+section#contact .form-group input.form-control:-ms-input-placeholder,
+section#contact .form-group textarea.form-control:-ms-input-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact .form-control:focus {
+    border-color: #ffd505;
+    box-shadow: none;
+}
+
+section#contact form input[type="submit"] {
+    background-color: #ffd505;
+    border: none;
+    padding: 15px 30px;
+    color: #222;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+section#contact form input[type="submit"]:hover {
+    background-color: #ffd505;
+    transform: scale(1.05);
+}
