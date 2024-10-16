@@ -1,169 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Start Learning Online</title>
-    <link rel="stylesheet" href="css/Courses.css">
-    <link rel="stylesheet" href="css/navbar2.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/Courses.css" />
+    <link rel="stylesheet" href="css/navbar2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <header id="navbar">
-        <nav class="navbar-container container">
-            <img src="assets\ALA.PNG" alt="Logo" class="logo">
-            <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div id="navbar-menu" aria-labelledby="navbar-toggle">
-                <ul class="navbar-links">
-                    <!-- قائمة اللغات المنسدلة -->
-                    <li class="navbar-item"><a class="navbar-link" href="/home">Home</a></li>
-                    <li class="navbar-item dropdown">
-                        <a class="navbar-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Services</i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <li><a href="/legal-services" class="dropdown-item">Legal Services</a></li>
-                            <li><a href="/translation-services" class="dropdown-item">Translation Services</a></li>
-                            <li><a href="/consulting-services" class="dropdown-item">Consulting Services</a></li>
-                        </ul>
-                    </li>
-                    <li class="navbar-item dropdown">
-                        
-                        <a class="navbar-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Languages <i class="fas fa-globe"></i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                            <li><a href="#" class="dropdown-item" onclick="changeLanguage('ar')">Arabic</a></li>
-                            <li><a href="#" class="dropdown-item" onclick="changeLanguage('en')">English</a></li>
-                        </ul>
-                        
-                        
-                    </li>
-                    <!-- قائمة الخدمات المنسدلة -->
-                    
-                    <li class="navbar-item"><a class="navbar-link" href="/contact">Contact Us</a></li>
-                    
-                </ul>
-            </div>
-        </nav>
+      <nav class="navbar-container container">
+        <img src="assets\ALA.PNG" alt="Logo" class="logo" />
+        <button
+          type="button"
+          id="navbar-toggle"
+          aria-controls="navbar-menu"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="navbar-menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar-links">
+            <!-- قائمة اللغات المنسدلة -->
+            <li class="navbar-item">
+              <a class="navbar-link" href="/home">Home</a>
+            </li>
+            <li class="navbar-item dropdown">
+              <a
+                class="navbar-link dropdown-toggle"
+                href="#"
+                id="servicesDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li>
+                  <a href="/legal-services" class="dropdown-item"
+                    >Legal Services</a
+                  >
+                </li>
+                <li>
+                  <a href="/translation-services" class="dropdown-item"
+                    >Translation Services</a
+                  >
+                </li>
+                <li>
+                  <a href="/consulting-services" class="dropdown-item"
+                    >Consulting Services</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-item dropdown">
+              <a
+                class="navbar-link dropdown-toggle"
+                href="#"
+                id="languageDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Languages <i class="fas fa-globe"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item"
+                    onclick="changeLanguage('ar')"
+                    >Arabic</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="dropdown-item"
+                    onclick="changeLanguage('en')"
+                    >English</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <!-- قائمة الخدمات المنسدلة -->
+
+            <li class="navbar-item">
+              <a class="navbar-link" href="/contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
-    <header class="main-header">
-    </header>
+    <header class="main-header"></header>
     <main>
-        <!-- First Content Section -->
-        <div class="content-wrapper">
-            <div class="text-section">
-                <h1>Start learning <span>Online.</span></h1>
-                <p>Search for courses</p>
-                <div class="search-bar">
-                    <input type="text" placeholder="What are you looking for?">
-                    <button>
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="image-section">
-                <img src="assets/3784896.jpg" alt="Learning Illustration">
-            </div>
+      <!-- First Content Section -->
+      <div class="content-wrapper">
+        <div class="text-section">
+          <h1>Start learning <span>Online.</span></h1>
+          <p>Search for courses</p>
+          <div class="search-bar">
+            <input type="text" placeholder="What are you looking for?" />
+            <button>
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
         </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <p>SCROLL DOWN</p>
-            <div class="arrow-down">&#x2193;</div>
+        <div class="image-section">
+          <img src="assets/3784896.jpg" alt="Learning Illustration" />
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <p>SCROLL DOWN</p>
+        <div class="arrow-down">&#x2193;</div>
+      </div>
+
+      <!-- Course and Profile Section -->
+      <section class="course-profile-section">
+        <!-- No Course Section -->
+        <div>
+          <div id="no-course-content" class="no-course-content">
+            <h2>No Course created yet.</h2>
+            <img
+              src="assets/hand-drawn-no-data-illustration.png"
+              alt="No Courses Image"
+            />
+          </div>
+          <button id="new-course-button" class="new-course-btn">
+            Add New Course
+          </button>
         </div>
 
-        <!-- Course and Profile Section -->
-        <section class="course-profile-section">
-            <!-- No Course Section -->
-            <div id="no-course-content" class="no-course-content">
-                <h2>No Course created yet.</h2>
-                <img src="assets/hand-drawn-no-data-illustration.png" alt="No Courses Image">
-                <button id="new-course-button" class="new-course-btn">Add New Course</button>
+        <div id="profile-section" class="profile-section" style="display: none">
+          <!-- Profile Section content goes here -->
+          <div class="profile-header">
+            <div class="profile-picture">
+              <img
+                src="assets/elXQHx7nSWKNDcrhdNDb9A.jpeg"
+                alt="Mohammad Yahya"
+              />
             </div>
-            
-            <div id="profile-section" class="profile-section" style="display: none;">
-                <!-- Profile Section content goes here -->
-                <div class="profile-header">
-                    <div class="profile-picture">
-                        <img src="assets/elXQHx7nSWKNDcrhdNDb9A.jpeg" alt="Mohammad Yahya">
-                    </div>
-                    <div class="profile-info">
-                        <h2>Mohammad Yahya</h2>
-                        <p>Senior Lawyer & Legal Expert</p>
-                        <p>Specialized in Corporate Law</p>
-                        <a href="#" class="view-profile">View Profile</a>
-                    </div>
-                </div>
-                <!-- Additional content -->
+            <div class="profile-info">
+              <h2>Mohammad Yahya</h2>
+              <p>Senior Lawyer & Legal Expert</p>
+              <p>Specialized in Corporate Law</p>
+              <a href="#" class="view-profile">View Profile</a>
             </div>
-            
-
-            <!-- Profile Section -->
-            <div class="profile-section">
-                <div class="profile-header">
-                    <div class="profile-picture">
-                        <img src="assets/elXQHx7nSWKNDcrhdNDb9A.jpeg" alt="Mohammad Yahya">
-                    </div>
-                    <div class="profile-info">
-                        <h2>Mohammad Yahya</h2>
-                        <p>Senior Lawyer & Legal Expert</p>
-                        <p>Specialized in Corporate Law</p>
-                        <a href="#" class="view-profile">View Profile</a>
-                    </div>
-                </div>
-                <div class="lawyer-info">
-                    <h3>About Mohammad Yahya</h3>
-                    <p>With over 15 years of experience in corporate law, Mohammad Yahya has been instrumental in shaping the legal strategies of top companies. His expertise in legal consulting and corporate governance has helped many organizations navigate complex legal challenges.</p>
-                    <p>He is known for his practical approach to legal education and is dedicated to helping aspiring lawyers excel in their careers through specialized courses.</p>
-                    <h4>Contact Information</h4>
-                    <p>Email: <a href="mailto:mohammad.yahya@lawfirm.com">mohammad.yahya@lawfirm.com</a></p>
-                    <p>Phone: +123-456-7890</p>
-                </div>
-                <div class="course-details">
-                    <h3>What You'll Learn</h3>
-                    <ul>
-                        <li><strong>Advanced Corporate Law:</strong> Understand the intricate details of corporate governance, mergers and acquisitions, and regulatory compliance.</li>
-                        <li><strong>Legal Strategy Development:</strong> Learn how to craft effective legal strategies that align with corporate objectives and mitigate risks.</li>
-                        <li><strong>Practical Legal Skills:</strong> Gain hands-on experience through case studies and mock trials to develop your legal reasoning and argumentation skills.</li>
-                        <li><strong>Client Relationship Management:</strong> Master the art of maintaining strong client relationships, including negotiation tactics and effective communication skills.</li>
-                        <li><strong>Ethics in Law:</strong> Explore the ethical considerations in legal practice and how to navigate complex ethical dilemmas with integrity.</li>
-                    </ul>
-                    <p>These courses are designed to equip you with the knowledge and skills necessary to excel in the competitive field of corporate law. Whether you're an aspiring lawyer or a seasoned professional, you'll gain valuable insights and practical skills that you can apply immediately in your practice.</p>
-                </div>
-            </div>
-        </section>
-        <div id="new-course-modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>إنشاء دورة قانونية جديدة</h2>
-                <form id="new-course-form">
-                    <label for="course-title">اسم الدورة</label>
-                    <input type="text" id="course-title" name="course-title" placeholder="أدخل اسم الدورة">
-        
-                    <label for="course-description">وصف الدورة</label>
-                    <textarea id="course-description" name="course-description" placeholder="أدخل وصفًا موجزًا عن الدورة..."></textarea>
-        
-                    <label for="course-link">رابط الزووم</label>
-                    <input type="url" id="course-link" name="course-link" placeholder="أدخل رابط الزووم">
-        
-                    <label for="course-mode">وضع الدورة</label>
-                    <select id="course-mode" name="course-mode">
-                        <option value="online">أون لاين</option>
-                        <option value="in-person">وجاهي</option>
-                    </select>
-        
-                    <button type="submit" class="save-btn">إنشاء الدورة</button>
-                    <button type="button" class="discard-btn">إلغاء</button>
-                </form>
-            </div>
+          </div>
+          <!-- Additional content -->
         </div>
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+          <div class="profile-header">
+            <div class="profile-picture">
+              <img
+                src="assets/elXQHx7nSWKNDcrhdNDb9A.jpeg"
+                alt="Mohammad Yahya"
+              />
+            </div>
+            <div class="profile-info">
+              <h2>Mohammad Yahya</h2>
+              <p>Senior Lawyer & Legal Expert</p>
+              <p>Specialized in Corporate Law</p>
+              <a href="#" class="view-profile">View Profile</a>
+            </div>
+          </div>
+          <div class="lawyer-info">
+            <h3>About Mohammad Yahya</h3>
+            <p>
+              With over 15 years of experience in corporate law, Mohammad Yahya
+              has been instrumental in shaping the legal strategies of top
+              companies. His expertise in legal consulting and corporate
+              governance has helped many organizations navigate complex legal
+              challenges.
+            </p>
+            <p>
+              He is known for his practical approach to legal education and is
+              dedicated to helping aspiring lawyers excel in their careers
+              through specialized courses.
+            </p>
+            <h4>Contact Information</h4>
+            <p>
+              Email:
+              <a href="mailto:mohammad.yahya@lawfirm.com"
+                >mohammad.yahya@lawfirm.com</a
+              >
+            </p>
+            <p>Phone: +123-456-7890</p>
+          </div>
+          <div class="course-details">
+            <h3>What You'll Learn</h3>
+            <ul>
+              <li>
+                <strong>Advanced Corporate Law:</strong> Understand the
+                intricate details of corporate governance, mergers and
+                acquisitions, and regulatory compliance.
+              </li>
+              <li>
+                <strong>Legal Strategy Development:</strong> Learn how to craft
+                effective legal strategies that align with corporate objectives
+                and mitigate risks.
+              </li>
+              <li>
+                <strong>Practical Legal Skills:</strong> Gain hands-on
+                experience through case studies and mock trials to develop your
+                legal reasoning and argumentation skills.
+              </li>
+              <li>
+                <strong>Client Relationship Management:</strong> Master the art
+                of maintaining strong client relationships, including
+                negotiation tactics and effective communication skills.
+              </li>
+              <li>
+                <strong>Ethics in Law:</strong> Explore the ethical
+                considerations in legal practice and how to navigate complex
+                ethical dilemmas with integrity.
+              </li>
+            </ul>
+            <p>
+              These courses are designed to equip you with the knowledge and
+              skills necessary to excel in the competitive field of corporate
+              law. Whether you're an aspiring lawyer or a seasoned professional,
+              you'll gain valuable insights and practical skills that you can
+              apply immediately in your practice.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div id="new-course-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>إنشاء دورة قانونية جديدة</h2>
+          <form id="new-course-form">
+            <label for="course-title">اسم الدورة</label>
+            <input
+              type="text"
+              id="course-title"
+              name="course-title"
+              placeholder="أدخل اسم الدورة"
+            />
+
+            <label for="course-description">وصف الدورة</label>
+            <textarea
+              id="course-description"
+              name="course-description"
+              placeholder="أدخل وصفًا موجزًا عن الدورة..."
+            ></textarea>
+
+            <label for="course-link">رابط الزووم</label>
+            <input
+              type="url"
+              id="course-link"
+              name="course-link"
+              placeholder="أدخل رابط الزووم"
+            />
+
+            <label for="course-mode">وضع الدورة</label>
+            <select id="course-mode" name="course-mode">
+              <option value="online">أون لاين</option>
+              <option value="in-person">وجاهي</option>
+            </select>
+
+            <button type="submit" class="save-btn">إنشاء الدورة</button>
+            <button type="button" class="discard-btn">إلغاء</button>
+          </form>
+        </div>
+      </div>
     </main>
-    <script src="Courses.js"></script> 
-    <script src="navbar.js"></script> 
-</body>
+    <script src="Courses.js"></script>
+    <script src="navbar.js"></script>
+  </body>
 </html>

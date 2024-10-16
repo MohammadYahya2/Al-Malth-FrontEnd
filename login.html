@@ -402,9 +402,10 @@
                   username: data.userdata.username,
                   id: data.userdata.userId,
                   email: data.userdata.email,
+                  role: data.userdata.role,
                 })
               );
-              window.location.href = "main.html"; // Redirect to main page
+              window.location.href = "/"; // Redirect to main page
             } else {
               regMessage.textContent = data.error || "Registration failed";
             }
@@ -473,9 +474,10 @@
                   username: data.userdata.username,
                   id: data.userdata.userId,
                   email: data.userdata.email,
+                  role: data.userdata.role,
                 })
               );
-              window.location.href = "main.html"; // Redirect to main page
+              window.location.href = "/"; // Redirect to main page
             } else {
               loginMessage.textContent = data.error || "Registration failed";
             }

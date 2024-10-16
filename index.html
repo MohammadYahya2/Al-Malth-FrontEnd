@@ -1,12 +1,1052 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Node.js Site</title>
-</head>
-<body>
-    <h1>Welcome to My Node.js Site!</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- تحديث إلى أحدث نسخة من Font Awesome -->
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_ACTUAL_API_KEY&sensor=true&libraries=places,weather"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/i18next@latest/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@latest/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/jquery-i18next@latest/jquery-i18next.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Al-Malath</title>
+    <style type="text/css">
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      #map-canvas {
+        height: 80%;
+        width: 100%;
+      }
+      #location {
+        margin: 10px;
+        font-size: 16px;
+      }
+      /* تصحيح بعض التنسيقات */
+      .navbar-nav li {
+        list-style: none; /* إزالة النقاط من القوائم */
+      }
+      .navbar-nav li a {
+        color: aliceblue;
+        font-size: 1.2em;
+        display: flex;
+        align-items: center;
+      }
+      .navbar-nav li a i {
+        margin-right: 8px; /* المسافة بين الأيقونة والنص */
+      }
+      .navbar-nav li a:hover {
+        color: gold;
+      }
+      .navbar-nav li a:hover i {
+        color: gold; /* تغيير لون الأيقونة عند المرور */
+      }
+    </style>
+  </head>
+  <body
+    id="page-top"
+    class="index"
+    data-pinterest-extension-installed="cr1.3.4"
+  >
+    <!-- Navigation -->
+    <!-- Header -->
+    <header>
+      <div class="video-background">
+        <video autoplay loop muted>
+          <source src="assets/Lawyer Demo Video (1080p).mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container">
+            <a
+              class="navbar-brand page-scroll"
+              href="#"
+              data-i18n="navbar.brand"
+              >Al Malath</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a
+                    class="nav-link page-scroll"
+                    href="#about"
+                    data-i18n="navbar.about"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link page-scroll"
+                    href="#team"
+                    data-i18n="navbar.team"
+                    >Team</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link page-scroll"
+                    href="#map"
+                    data-i18n="navbar.map"
+                    >Map</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <span class="nav-link">+972 52 53709</span>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle page-scroll"
+                    href="#user"
+                    id="userDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  ></a>
+                  <div class="dropdown-menu" aria-labelledby="userDropdown">
+                    <a
+                      class="dropdown-item"
+                      href="#profile"
+                      data-i18n="navbar.profile"
+                      >Profile</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#settings"
+                      data-i18n="navbar.settings"
+                      >Settings</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      id="loginLogoutLink"
+                      onclick="toggleLogin()"
+                      >Login</a
+                    >
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle page-scroll"
+                    href="#"
+                    id="languageDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    data-i18n="navbar.languages"
+                  >
+                    Languages <i class="fas fa-globe"></i>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="changeLanguage('en')"
+                      >English</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      onclick="changeLanguage('ar')"
+                      >Arabic</a
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="intro-text">
+          <div class="intro-lead-in" data-i18n="intro.lead_in">Al Malath</div>
+          <div class="intro-lead-ino" data-i18n="intro.welcome">
+            Welcome to the Malath Law Office
+          </div>
+          <div class="intro-heading" data-i18n="intro.heading">
+            We are here to protect your rights and defend your interests
+          </div>
+          <a
+            href="#services"
+            class="page-scroll btn btn-xl btn-custom"
+            data-i18n="intro.btn_view_services"
+            >View our services</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <div class="container-n">
+      <div class="news-header">
+        <h2 data-i18n="news.header">أخبار</h2>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img src="assets/lew.png" alt="Car" />
+        </div>
+        <div class="card-body">
+          <div class="tag-container">
+            <span class="tag tag-teal" data-i18n="news.card1.tag">Law</span>
+          </div>
+          <h4 data-i18n="news.card1.title">
+            Important Legal Updates in Privacy Law
+          </h4>
+          <p data-i18n="news.card1.description">
+            The Supreme Court recently issued decisions that significantly
+            affect privacy laws and personal data protection.
+          </p>
+          <a
+            href="article1.html"
+            class="read-more"
+            data-i18n="news.card1.read_more"
+            >Read More</a
+          >
+          <div class="user">
+            <img src="assets/lew.png" alt="User" />
+            <div class="user-info">
+              <h5>يوسف ابو الصاع</h5>
+              <small data-i18n="news.card1.time">2 hours ago</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img src="assets/haja.png" alt="Balloons" />
+        </div>
+        <div class="card-body">
+          <div class="tag-container">
+            <span class="tag tag-purple" data-i18n="news.card2.tag"
+              >Popular</span
+            >
+          </div>
+          <h4 data-i18n="news.card2.title">
+            Strategies to Reduce Professional Stress
+          </h4>
+          <p data-i18n="news.card2.description">
+            Learn the best ways to deal with stress and anxiety related to your
+            professional future.
+          </p>
+          <a
+            href="article2.html"
+            class="read-more"
+            data-i18n="news.card2.read_more"
+            >Read More</a
+          >
+          <div class="user">
+            <img
+              src="https://lh3.googleusercontent.com/ogw/ADGmqu8sn9zF15pW59JIYiLgx3PQ3EyZLFp5Zqao906l=s32-c-mo"
+              alt="User"
+            />
+            <div class="user-info">
+              <h5>يوسف ابو الصاع</h5>
+              <small data-i18n="news.card2.time">Yesterday</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img src="assets/newsad.png" alt="City" />
+        </div>
+        <div class="card-body">
+          <div class="tag-container">
+            <span class="tag tag-pink" data-i18n="news.card3.tag">Tips</span>
+          </div>
+          <h4 data-i18n="news.card3.title">
+            Best Practices to Improve Your Efficiency as a Lawyer
+          </h4>
+          <p data-i18n="news.card3.description">
+            Practical tips to enhance your skills and increase your professional
+            efficiency as a lawyer.
+          </p>
+          <a
+            href="article3.html"
+            class="read-more"
+            data-i18n="news.card3.read_more"
+            >Read More</a
+          >
+          <div class="user">
+            <img src="assets/S2YorKAWR1KK2yBt3Hvebw.jpeg" alt="User" />
+            <div class="user-info">
+              <h5>يوسف ابو الصاع</h5>
+              <small data-i18n="news.card3.time">A week ago</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section
+      id="legal-support"
+      class="d-flex align-items-center justify-content-center"
+    >
+      <div class="container-m">
+        <div class="video-container">
+          <video id="support-video" autoplay loop controls>
+            <source src="assets\al-malth.mp4" type="video/mp4" />
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+          </video>
+        </div>
+        <div class="text-container">
+          <h1 data-i18n="legal_support.heading">
+            مكتب المحاماة <span class="highlight">الملاذ</span>
+          </h1>
+          <p data-i18n="legal_support.description">
+            نقدم لعملائنا دعم قانوني شامل لتحقيق الأمان والاستقرار القانوني وذلك
+            للدعم القانوني قبل نشوء النزاعات وتسوية المنازعات الدولية التي يمكن
+            أن تثار في القانون أو عن العمل أو أي علاقة تعاقدية أمام الجهات
+            القضائية من خلال فريق عمل قانوني يتمتع بالخبرة والكفاءة لتحقيق ذلك.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="news-header">
+              <h2 data-i18n="services.title">خدماتنا</h2>
+            </div>
+            <h3
+              class="section-subheading text-muted"
+              data-i18n="services.description"
+            >
+              نقدم مجموعة متنوعة من الخدمات القانونية لتلبية احتياجاتكم.
+            </h3>
+          </div>
+        </div>
+        <div class="row text-center align-items-center">
+          <button class="nav-btn left-btn col-md-1">❮</button>
+          <div class="slider-wrapper col-md-10">
+            <div class="slider d-flex">
+              <div class="slider-item">
+                <img
+                  src="assets/womdan.png"
+                  alt="استشارات قانونية"
+                  class="service-image"
+                />
+                <h4
+                  class="service-heading"
+                  data-i18n="services.legal_advice.title"
+                >
+                  استشارات قانونية
+                </h4>
+                <p
+                  class="service-description"
+                  data-i18n="services.legal_advice.description"
+                >
+                  نقدم استشارات قانونية متخصصة لمساعدتكم في اتخاذ القرارات
+                  الصائبة.
+                </p>
+                <a
+                  href="legal-advice.html"
+                  class="read-more"
+                  data-i18n="services.read_more"
+                  >اقرأ المزيد</a
+                >
+              </div>
+              <div class="slider-item">
+                <img
+                  src="assets/mans.png"
+                  alt="مراجعة العقود"
+                  class="service-image"
+                />
+                <h4
+                  class="service-heading"
+                  data-i18n="services.review_contracts.title"
+                >
+                  مراجعة العقود
+                </h4>
+                <p
+                  class="service-description"
+                  data-i18n="services.review_contracts.description"
+                >
+                  نقوم بمراجعة وإعداد العقود لضمان حماية حقوقكم وتجنب النزاعات
+                  القانونية.
+                </p>
+                <a
+                  href="LegalTexts.html"
+                  class="read-more"
+                  data-i18n="services.read_more"
+                  >اقرأ المزيد</a
+                >
+              </div>
+              <div class="slider-item">
+                <img
+                  src="assets/kamal.jpg"
+                  alt="المرافعات القانونية"
+                  class="service-image"
+                />
+                <h4
+                  class="service-heading"
+                  data-i18n="services.legal_pleadings.title"
+                >
+                  المرافعات القانونية
+                </h4>
+                <p
+                  class="service-description"
+                  data-i18n="services.legal_pleadings.description"
+                >
+                  نمتلك خبرة واسعة في تمثيل العملاء أمام المحاكم والدفاع عن
+                  حقوقهم.
+                </p>
+                <a
+                  href="Courses.html"
+                  class="read-more"
+                  data-i18n="services.read_more"
+                  >اقرأ المزيد</a
+                >
+              </div>
+              <div class="slider-item">
+                <img
+                  src="assets/kamal.jpg"
+                  alt="المرافعات القانونية"
+                  class="service-image"
+                />
+                <h4
+                  class="service-heading"
+                  data-i18n="services.legal_pleadings.title"
+                >
+                  المرافعات القانونية
+                </h4>
+                <p
+                  class="service-description"
+                  data-i18n="services.legal_pleadings.description"
+                >
+                  نمتلك خبرة واسعة في تمثيل العملاء أمام المحاكم والدفاع عن
+                  حقوقهم.
+                </p>
+                <a
+                  href="Legal translation.html"
+                  class="read-more"
+                  data-i18n="services.read_more"
+                  >اقرأ المزيد</a
+                >
+              </div>
+            </div>
+          </div>
+          <button class="nav-btn right-btn col-md-1">❯</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="act.js"></script>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-12 text-center mb-4">
+            <small
+              class="text-uppercase"
+              style="color: #000000; font-size: 3em"
+              data-i18n="about.title"
+              >تعرف علينا</small
+            >
+          </div>
+          <div class="col-md-6 p-4 p-sm-5 order-2 order-sm-1 text-right">
+            <h1
+              class="h2 mb-4"
+              style="font-weight: 600"
+              data-i18n="about.we_are_here"
+              class="news-header"
+            >
+              نحن هنا <span style="color: #244a89">لمساعدتك!</span>
+            </h1>
+            <p
+              class="text-secondary"
+              style="line-height: 2; font-size: 1.2em"
+              data-i18n="about.description1"
+            >
+              تأسس مكتب المحاماة الملاذ في عام 2010 بهدف تقديم خدمات قانونية
+              شاملة ومتكاملة لعملائنا. يتميز مكتبنا بفريق من المحامين ذوي الخبرة
+              والكفاءة العالية في مختلف مجالات القانون. نحن ملتزمون بتقديم أفضل
+              الحلول القانونية لعملائنا من خلال تحليل دقيق وفهم عميق لقضاياهم.
+              يحرص مكتب المحاماة الملاذ على مواكبة أحدث التطورات القانونية لضمان
+              تقديم استشارات قانونية متميزة.
+            </p>
+            <a
+              href="#"
+              class="btn-custom-m mt-4"
+              data-i18n="about.btn_view_services"
+            >
+              <span>اطلع على خدماتنا</span>
+              <svg
+                width="25px"
+                fill="currentColor"
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 489 489"
+                style="enable-background: new 0 0 489 489"
+                xml:space="preserve"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M329.2,327.2c-4.5,0-8.1,3.4-8.6,7.9c-3.9,38.6-36.5,68.7-76.2,68.7c-39.6,0-72.2-30.1-76.2-68.7c-0.5-4.4-4.1-7.9-8.6-7.9h-104c-21.8,0-39.5,17.7-39.5,39.5v82.8c0,21.8,17.7,39.5,39.5,39.5h377.8c21.8,0,39.5-17.7,39.5-39.5v-82.7c0-21.8-17.7-39.5-39.5-39.5H329.2V327.2z"
+                    />
+                    <path
+                      d="M303.5,198.6l-30.9,30.9V28.1C272.6,12.6,260,0,244.5,0l0,0c-15.5,0-28.1,12.6-28.1,28.1v201.4l-30.9-30.9c-9.5-9.5-24.7-11.9-35.9-4.4c-15.3,10.2-16.8,31.1-4.5,43.4l82.8,82.8c9.2,9.2,24.1,9.2,33.3,0l82.8-82.8c12.3-12.3,10.8-33.2-4.5-43.4C328.2,186.6,313,189,303.5,198.6z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="col-md-6 p-0 text-center order-1 order-sm-2">
+            <img src="assets/law.png" class="w-100" alt="" />
+          </div>
+          <div class="col-md-6 p-0 text-center">
+            <img src="assets/jasds.png" class="w-100" alt="" />
+          </div>
+          <div class="col-md-6 p-4 p-sm-5 text-right">
+            <h1
+              class="h2 mb-4"
+              style="font-weight: 600"
+              data-i18n="about.we_are_here"
+            >
+              نحن هنا <span style="color: #244a89">لمساعدتك!</span>
+            </h1>
+            <p
+              class="text-secondary"
+              style="line-height: 2; font-size: 1.2em"
+              data-i18n="about.description2"
+            >
+              على مر السنوات، حصل مكتب المحاماة الملاذ على العديد من الجوائز
+              والتقديرات في مجال القانون. نفتخر بمساهمتنا في العديد من القضايا
+              البارزة التي ساهمت في تغيير حياة عملائنا نحو الأفضل. رؤيتنا هي أن
+              نكون الرواد في تقديم الخدمات القانونية المتميزة والمبتكرة في
+              المنطقة. نحن ملتزمون بأعلى معايير المهنية والأخلاقية في جميع
+              تعاملاتنا.
+            </p>
+            <a
+              href="#"
+              class="btn-custom-m mt-4"
+              data-i18n="about.btn_view_services"
+            >
+              <span>اطلع على خدماتنا</span>
+              <svg
+                width="25px"
+                fill="currentColor"
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 489 489"
+                style="enable-background: new 0 0 489 489"
+                xml:space="preserve"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M329.2,327.2c-4.5,0-8.1,3.4-8.6,7.9c-3.9,38.6-36.5,68.7-76.2,68.7c-39.6,0-72.2-30.1-76.2-68.7c-0.5-4.4-4.1-7.9-8.6-7.9h-104c-21.8,0-39.5,17.7-39.5,39.5v82.8c0,21.8,17.7,39.5,39.5,39.5h377.8c21.8,0,39.5-17.7,39.5-39.5v-82.7c0-21.8-17.7-39.5-39.5-39.5H329.2V327.2z"
+                    />
+                    <path
+                      d="M303.5,198.6l-30.9,30.9V28.1C272.6,12.6,260,0,244.5,0l0,0c-15.5,0-28.1,12.6-28.1,28.1v201.4l-30.9-30.9c-9.5-9.5-24.7-11.9-35.9-4.4c-15.3,10.2-16.8,31.1-4.5,43.4l82.8,82.8c9.2,9.2,24.1,9.2,33.3,0l82.8-82.8c12.3-12.3,10.8-33.2-4.5-43.4C328.2,186.6,313,189,303.5,198.6z"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap");
+
+      body {
+        font-family: "Poppins", sans-serif !important;
+      }
+
+      .btn-custom-m {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #244a89;
+        color: #fff;
+        width: 240px;
+        border-radius: 25px;
+        padding: 12px 20px;
+        text-decoration: none;
+        font-family: "Cairo", sans-serif;
+        font-size: 1.1em;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-custom:hover {
+        background-color: #0049dc;
+      }
+
+      .btn-custom svg {
+        margin-left: 10px;
+      }
+    </style>
+
+    <section id="team" class="bg-light-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading" data-i18n="team.title">
+              يوسف أبو الصاع
+            </h2>
+            <h3 class="section-subheading text-muted" data-i18n="team.subtitle">
+              مدير الشركة ومحامي متخصص في القضايا المدنية
+            </h3>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-sm-6 col-md-4">
+            <div class="team-member">
+              <div class="team-image">
+                <img
+                  src="assets/S2YorKAWR1KK2yBt3Hvebw.jpeg"
+                  class="img-responsive img-circle"
+                  alt="يوسف أبو الصاع"
+                />
+              </div>
+              <div class="team-info">
+                <h4 data-i18n="team.members.0.name">يوسف أبو الصاع</h4>
+                <p class="text-muted" data-i18n="team.members.0.role">
+                  مدير الشركة ومحامي متخصص في القضايا المدنية
+                </p>
+                <ul class="social-buttons">
+                  <li>
+                    <a
+                      href="https://www.instagram.com/yourprofile"
+                      target="_blank"
+                      class="social-icon instagram"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://wa.me/yourphonenumber"
+                      target="_blank"
+                      class="social-icon whatsapp"
+                      ><i class="fab fa-whatsapp"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://t.me/yourprofile"
+                      target="_blank"
+                      class="social-icon telegram"
+                      ><i class="fab fa-telegram"></i
+                    ></a>
+                  </li>
+                </ul>
+                <p class="phone-number" data-i18n="team.members.0.phone_number">
+                  رقم الهاتف: 0595253709
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <p class="large text-muted" data-i18n="team.description">
+              نحن في مكتب المحاماة الملاذ نقدم لك فريقاً من المحامين المتخصصين
+              لضمان أفضل النتائج في كل قضية. نحن هنا لدعمك وتقديم المشورة
+              القانونية التي تحتاجها.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="map"
+      class="bg-light-gray"
+      style="font-family: Poppins, sans-serif !important"
+    >
+      <div class="map-container">
+        <div class="map-header" data-i18n="map.header">موقع مكتب الملاذ</div>
+
+        <div class="responsive-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.7566655438846!2d35.1853905!3d31.9101566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d2bdde5f4a367%3A0xa36510acd7b5980d!2z2YXZhtiv2YIg2KzZhdi52KzZhdmK2K_YryDYp9mE2YXYs9in2YUg2K_Yp9mI2Kkg2KfZhNiq2YrZgA!5e0!3m2!1sen!2sus!4v1690319821284"
+            width="600"
+            height="450"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <script>
+        $(function () {
+          $("a.page-scroll").bind("click", function (event) {
+            var $anchor = $(this);
+            $("html, body")
+              .stop()
+              .animate(
+                {
+                  scrollTop: $($anchor.attr("href")).offset().top,
+                },
+                1500,
+                "easeInOutExpo"
+              );
+            event.preventDefault();
+          });
+        });
+
+        $("body").scrollspy({
+          target: ".navbar-fixed-top",
+        });
+
+        // Closes the Responsive Menu on Menu Item Click
+        $(".navbar-collapse ul li a").click(function () {
+          $(".navbar-toggle:visible").click();
+        });
+      </script>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading" data-i18n="contact.heading">
+              Contact Us
+            </h2>
+            <h3
+              class="section-subheading text-muted"
+              data-i18n="contact.subheading"
+            >
+              Lorem ipsum dolor sit amet consectetur.
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input
+                type="hidden"
+                name="access_key"
+                value="578364a0-6f76-455c-b670-7a851c04a727"
+              />
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Name"
+                      name="name"
+                      required
+                      data-i18n="[placeholder]contact.name"
+                      data-validation-required-message="Please enter your name."
+                    />
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email"
+                      name="email"
+                      required
+                      data-i18n="[placeholder]contact.email"
+                      data-validation-required-message="Please enter your email address."
+                    />
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="Phone Number"
+                      name="phone"
+                      required
+                      data-i18n="[placeholder]contact.phone"
+                      data-validation-required-message="Please enter your phone number."
+                    />
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <textarea
+                      class="form-control"
+                      placeholder="Message"
+                      name="message"
+                      required
+                      data-i18n="[placeholder]contact.message"
+                      data-validation-required-message="Please enter a message."
+                    ></textarea>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12 text-center">
+                  <div id="success"></div>
+                  <button
+                    type="submit"
+                    class="page-scroll btn btn-xl btn-custom"
+                    data-i18n="contact.send_message"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="cta-text">
+                  <h4 data-i18n="footer.find_us">Find us</h4>
+                  <span>Ramllah -albalo3</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-phone"></i>
+                <div class="cta-text">
+                  <h4 data-i18n="footer.call_us">Call us</h4>
+                  <span>0595253709</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="far fa-envelope-open"></i>
+                <div class="cta-text">
+                  <h4 data-i18n="footer.mail_us">Mail us</h4>
+                  <span>mohammad1.yahya2019@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 mb-50">
+              <div class="footer-widget">
+                <div class="footer-logo">
+                  <a href="index.html"
+                    ><img
+                      src="assets/photorealistic-lifestyle-judge.jpg"
+                      class="img-fluid"
+                      alt="logo"
+                  /></a>
+                </div>
+                <div class="footer-text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consec tetur adipisicing elit,
+                    sed do eiusmod tempor incididuntut consec tetur adipisicing
+                    elit,Lorem ipsum dolor sit amet.
+                  </p>
+                </div>
+                <div class="footer-social-icon">
+                  <span>Follow us</span>
+                  <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                  <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                  <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3 data-i18n="footer.useful_links">Useful Links</h3>
+                </div>
+                <ul>
+                  <li><a href="#" data-i18n="footer.home">Home</a></li>
+                  <li><a href="#" data-i18n="footer.about_us">About us</a></li>
+                  <li>
+                    <a href="#" data-i18n="footer.our_services">Our Services</a>
+                  </li>
+                  <li>
+                    <a href="#" data-i18n="footer.expert_team">Expert Team</a>
+                  </li>
+                  <li>
+                    <a href="#" data-i18n="footer.latest_news">Latest News</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3 data-i18n="footer.subscribe">Subscribe</h3>
+                </div>
+                <div class="footer-text mb-25">
+                  <p data-i18n="footer.subscribe_description">
+                    Don’t miss to subscribe to our new feeds, kindly fill the
+                    form below.
+                  </p>
+                </div>
+                <div class="subscribe-form">
+                  <form action="#">
+                    <input type="text" placeholder="Email Address" />
+                    <button><i class="fab fa-telegram-plane"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+              <div class="copyright-text">
+                <p>
+                  &copy; 2023, All Right Reserved <a href="#">Mohammad Yahya</a>
+                </p>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+              <div class="footer-menu">
+                <ul>
+                  <li><a href="#" data-i18n="footer.home">Home</a></li>
+                  <li><a href="#" data-i18n="footer.terms">Terms</a></li>
+                  <li><a href="#" data-i18n="footer.privacy">Privacy</a></li>
+                  <li><a href="#" data-i18n="footer.policy">Policy</a></li>
+                  <li><a href="#" data-i18n="footer.contact">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <span
+      style="
+        height: 20px;
+        width: 40px;
+        min-height: 20px;
+        min-width: 40px;
+        position: absolute;
+        opacity: 0.85;
+        z-index: 8675309;
+        display: none;
+        cursor: pointer;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAYAAAD/Rn+7AAADU0lEQVR42s2WXUhTYRjHz0VEVPRFUGmtVEaFUZFhHxBhsotCU5JwBWEf1EWEEVHQx4UfFWYkFa2biPJiXbUta33OXFtuUXMzJ4bK3Nqay7m5NeZq6h/tPQ+xU20zugjOxR/+7/O8539+5znnwMtNTExwJtMb3L/fiLv3botCSmUjeCaejTOb39AiFothfHxcFIrHY8RksZjBsckJcOIRMfFsHD/SsbExUYpnI8DR0dGUGjSb0byhEJp5Uqg5CTSzc2CQleJbMEj9/ywBcGRkJEk9DQqouEVQT1sK444yWI9UonmTjGqauVLEIlHa9x8lAMbj8SSpp0rwKGMVvg8P46vbg0C7na8z8JsMcgHe7jlEa+edRhiLy8n/TUMfu6EvLElk+U0WtGwrTrdfAGQf5J8iiK4LVzDU28t8JtMSocf8E+l68myaNFXm/6rXslLK7ay5TOunuRvZWpJuvwAYjUaTpOIWoquuAZ219RTaxKYp9BbjycoN5FvL9qH9TBX5rvoGdJythvXYSTxdtRnWylO/ZdqrLsGwszzhWQ593z2KlAwCYCQSSZJ6ehZ0W7bD9VBLgN0NCqr3qR7R2rBrL3pu3Sb/7nDlz2uy6cG0OXk0GTbZXzNp8trsPAQdTj6frlWzN2DcXZGKQQAMh8NJ6rpyHe+PnkCr/CAFdZyvpfpjuvkifLF9wIt1Wwlo0OHie1RvWrKa93RjzfzliTzPKz3ltB0/Tevmwp14wGUgHAzSOoUEwFAolFaaBSuhnslPRkJexUJtZ6v5HtUeLswl33n1BgEY5fvhs9sJ3FAiT+QYyyvoAQJuD0KBAFRTJNAuz5/s3gJgMBhMJwrVFRThM5tY5zUF/A4X1f2fvQTRLCuBreoim0YmAbqNJryvPEXeeq46kaNdkQ/1HCncbJKPs9ZSv2VHGfWsZ2hfkhKAfr8/pdxWKx4wwD69PmVfNSOL+lr2w+gYqHpWDtXt1xQ8AMlWU0e1lqLd/APRHoP8AJqWrQG9gYxcPMsvSJUvAA4MDKTUJ7MZLaVy8v+qT21tcDx/OemePr0RTkNrur4A6PP5xCgBsL+/X4wiQDpuuVxOeL1eMYmYeDY6sOp0z+B0OuHxeEQhxkJMFosJiSO/UinOI/8Pc+l7KKArAT8AAAAASUVORK5CYII=);
+      "
+    ></span>
+
+    <!-- <script src="login.js"></script> -->
+    <script src="act.js"></script>
+    <!-- jQuery Version 1.11.0 -->
+    <script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/classie.js"></script>
+    <script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/jqBootstrapValidation.js"></script>
+    <script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/contact_me.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const user = JSON.parse(localStorage.getItem("currentUser"));
+
+        if (user?.id) {
+          console.log(user.username);
+
+          document.getElementById("userDropdown").innerHTML = user.username;
+          document.getElementById("loginLogoutLink").textContent = "Logout";
+        } else {
+          document.getElementById("userDropdown").textContent = "User";
+          document.getElementById("loginLogoutLink").textContent = "Login";
+        }
+      });
+      function toggleLogin() {
+        const user = JSON.parse(localStorage.getItem("currentUser"));
+
+        if (user?.id) {
+          // Log out the user
+          localStorage.removeItem("currentUser");
+          document.getElementById("userDropdown").textContent = "User";
+          document.getElementById("loginLogoutLink").textContent = "Login";
+          window.location.href = "/";
+        } else {
+          // Redirect to login page
+          window.location.href = "login.html";
+        }
+      }
+    </script>
+  </body>
 </html>
-C:\Users\Amer\Desktop\sdfsf5\index.html
