@@ -106,19 +106,20 @@
     "join_us": "كن جزءًا من قصتنا!"
 },
 "team": {
-    "title": "يوسف أبو الصاع",
-    "subtitle": "مدير الشركة ومحامي متخصص في القضايا المدنية",
+    
+    "title": "عبد الله أبو الصاع",
+    "subtitle": "مدير الشركة ومحامي متخصص في جميع القضايا ",
     "members": [
         {
-            "name": "يوسف أبو الصاع",
-            "role": "مدير الشركة ومحامي متخصص في القضايا المدنية",
+            "name": "عبد الله أبو الصاع",
+            "role": "مدير الشركة ومحامي متخصص في جميع القضايا",
             "image": "S2YorKAWR1KK2yBt3Hvebw.jpeg",
             "social": {
                 "instagram": "https://www.instagram.com/yourprofile",
                 "whatsapp": "https://wa.me/yourphonenumber",
                 "telegram": "https://t.me/yourprofile"
             },
-            "phone_number": "0595253709"
+            "phone_number": "0597544333"
         }
     ],
     "description": "نحن في مكتب المحاماة الملاذ نقدم لك فريقاً من المحامين المتخصصين لضمان أفضل النتائج في كل قضية. نحن هنا لدعمك وتقديم المشورة القانونية التي تحتاجها."

@@ -1,76 +1,158 @@
-function register() {
-  const name = document.getElementById("reg-name").value;
-  const email = document.getElementById("reg-email").value;
-  const password = document.getElementById("reg-password").value;
-  const message = document.getElementById("reg-message");
+const emailInput = document.getElementById("reg-email");
+const passwordInput = document.getElementById("reg-password");
+const loginEmailInput = document.getElementById("login-email");
+const loginPasswordInput = document.getElementById("login-password");
+const regMessage = document.getElementById("reg-message");
+const loginMessage = document.getElementById("login-message");
 
-  // تعبير منتظم للتحقق من صحة البريد الإلكتروني
-  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+// Regular expression to validate email
+const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+// Sign-up validations
+emailInput.addEventListener("focusout", validateEmail);
+emailInput.addEventListener("input", validateEmail);
+passwordInput.addEventListener("focusout", validatePassword);
+passwordInput.addEventListener("input", validatePassword);
+
+function validateEmail() {
+  const email = emailInput.value;
+  if (email && !emailPattern.test(email)) {
+    regMessage.textContent = "Please enter a valid email address";
+  } else {
+    regMessage.textContent = ""; // Clear the message if valid
+  }
+}
+
+function validatePassword() {
+  const password = passwordInput.value;
+  if (password.length > 0 && password.length < 6) {
+    regMessage.textContent = "Password must be at least 6 characters long";
+  } else {
+    regMessage.textContent = ""; // Clear the message if valid
+  }
+}
+
+async function signup(event) {
+  event.preventDefault();
+  const name = document.getElementById("reg-name").value;
+  const email = emailInput.value;
+  const password = passwordInput.value;
+
+  // Clear previous message
+  regMessage.textContent = "";
 
   if (name === "" || email === "" || password === "") {
-    message.textContent = "Please fill in all fields";
+    regMessage.textContent = "Please fill in all fields";
     return;
   }
 
-  if (!emailPattern.test(email)) {
-    message.textContent = "Please enter a valid email address";
-    return;
-  }
+  if (regMessage.textContent === "") {
+    try {
+      const response = await fetch("http://localhost:5001/users/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username: name, email, password }),
+      });
 
-  if (localStorage.getItem(email)) {
-    message.textContent = "Email already exists";
-  } else {
-    const user = {
-      name: name,
-      password: password,
-    };
-    localStorage.setItem(email, JSON.stringify(user));
-    message.textContent = "Registration successful";
-    localStorage.setItem("currentUser", email); // حفظ البريد الإلكتروني للمستخدم الحالي
-    window.location.href = "/"; // إعادة التوجيه إلى الصفحة الرئيسية
+      const data = await response.json();
+
+      if (response.ok) {
+        regMessage.textContent = "Registration successful";
+        localStorage.setItem(
+          "currentUser",
+          JSON.stringify({
+            token: data.token,
+            username: data.userdata.username,
+            id: data.userdata.userId,
+            email: data.userdata.email,
+            role: data.userdata.role,
+          })
+        );
+        window.location.href = "/"; // Redirect to main page
+      } else {
+        regMessage.textContent = data.error || "Registration failed";
+      }
+    } catch (error) {
+      regMessage.textContent = "An error occurred. Please try again.";
+      console.error("Error:", error);
+    }
   }
 }
 
-function login() {
-  const email = document.getElementById("login-email").value;
-  const password = document.getElementById("login-password").value;
-  const message = document.getElementById("login-message");
+// Sign-in validations
+loginEmailInput.addEventListener("focusout", validateLoginEmail);
+loginEmailInput.addEventListener("input", validateLoginEmail);
+loginPasswordInput.addEventListener("focusout", validateLoginPassword);
+loginPasswordInput.addEventListener("input", validateLoginPassword);
+
+function validateLoginEmail() {
+  const email = loginEmailInput.value;
+  if (email && !emailPattern.test(email)) {
+    loginMessage.textContent = "Please enter a valid email address";
+  } else {
+    loginMessage.textContent = ""; // Clear the message if valid
+  }
+}
+
+function validateLoginPassword() {
+  const password = loginPasswordInput.value;
+  if (password.length > 0 && password.length < 6) {
+    loginMessage.textContent = "Password must be at least 6 characters long";
+  } else {
+    loginMessage.textContent = ""; // Clear the message if valid
+  }
+}
+
+async function login(event) {
+  event.preventDefault();
+  const email = loginEmailInput.value;
+  const password = loginPasswordInput.value;
+
+  loginMessage.textContent = "";
 
   if (email === "" || password === "") {
-    message.textContent = "Please fill in all fields";
+    loginMessage.textContent = "Please fill email and password";
     return;
   }
 
-  const user = JSON.parse(localStorage.getItem(email));
-  if (user && user.password === password) {
-    localStorage.setItem("currentUser", email);
-    window.location.href = "/";
-  } else {
-    message.textContent = "Invalid email or password";
+  if (loginMessage.textContent === "") {
+    try {
+      const response = await fetch("http://localhost:5001/users/signin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        loginMessage.textContent = "Registration successful";
+        localStorage.setItem(
+          "currentUser",
+          JSON.stringify({
+            token: data.token,
+            username: data.userdata.username,
+            id: data.userdata.userId,
+            email: data.userdata.email,
+            role: data.userdata.role,
+          })
+        );
+        window.location.href = "/"; // Redirect to main page
+      } else {
+        loginMessage.textContent = data.error || "Registration failed";
+      }
+    } catch (error) {
+      loginMessage.textContent = "An error occurred. Please try again.";
+      console.error("Error:", error);
+    }
   }
 }
 
-function toggleLogin() {
-  const currentUser = localStorage.getItem("currentUser");
-  if (currentUser) {
-    // Log out the user
-    localStorage.removeItem("currentUser");
-    document.getElementById("userDropdown").textContent = "User";
-    document.getElementById("loginLogoutLink").textContent = "Login";
-    window.location.href = "/";
-  } else {
-    // Redirect to login page
-    window.location.href = "login.html";
-  }
-}
-
-function checkLoginStatus() {
-  const user = localStorage.getItem("currentUser");
-  if (user.id) {
-    document.getElementById("userDropdown").textContent = user.username;
-    document.getElementById("loginLogoutLink").textContent = "Logout";
-  } else {
-    document.getElementById("userDropdown").textContent = "User";
-    document.getElementById("loginLogoutLink").textContent = "Login";
-  }
+function toggleForm() {
+  var container = document.querySelector(".container");
+  container.classList.toggle("active");
 }

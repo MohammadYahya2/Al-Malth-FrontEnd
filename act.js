@@ -25,7 +25,7 @@ $(".navbar-collapse ul li a").click(function () {
 });
 function initMap() {
   // تحديد الموقع الجغرافي (العرض، الطول)
-  const location = { lat: 37.7749, lng: -122.4194 }; // يمكنك تعديل الموقع حسب الحاجة
+  const location = { lat: 31.923917, lng: 35.213333 };
 
   // إنشاء خريطة Google Maps
   const map = new google.maps.Map(document.getElementById("map"), {

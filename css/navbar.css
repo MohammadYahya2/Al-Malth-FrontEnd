@@ -1,56 +1,64 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 
 :root {
-    --navbar-bg-color: hsl(210, 15%, 20%); /* لون داكن للأزرق البحري */
-    --navbar-text-color: hsl(0, 0%, 100%); /* لون نص أبيض */
-    --navbar-text-color-focus: hsl(45, 85%, 55%); /* لون ذهبي دافئ عند التركيز */
-    --navbar-bg-contrast: hsl(210, 25%, 15%); /* لون أزرق أكثر قتامة للتمايز */
-    --primary-font: 'Lora', serif; /* تعيين Lora كخط رئيسي */
+    --navbar-bg-color: hsl(210, 15%, 20%);
+    /* لون داكن للأزرق البحري */
+    --navbar-text-color: hsl(0, 0%, 100%);
+    /* لون نص أبيض */
+    --navbar-text-color-focus: hsl(45, 85%, 55%);
+    /* لون ذهبي دافئ عند التركيز */
+    --navbar-bg-contrast: hsl(210, 25%, 15%);
+    /* لون أزرق أكثر قتامة للتمايز */
+    --primary-font: 'Lora', serif;
+    /* تعيين Lora كخط رئيسي */
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: var(--primary-font); /* استخدام Lora في جميع العناصر */
+    font-family: var(--primary-font);
+    /* استخدام Lora في جميع العناصر */
 }
 
 .container {
-max-width: 1000px;
-padding-left: 1.4rem;
-padding-right: 1.4rem;
-margin-left: auto;
-margin-right: auto;
+    max-width: 1000px;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 #navbar {
-/* POSITION: FIXED; */
-Z-INDEX: 999;
---navbar-height: 64px;
-height: var(--navbar-height);
-background-color: var(--navbar-bg-color);
-left: 0;
-right: 0;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    /* POSITION: FIXED; */
+    Z-INDEX: 999;
+    --navbar-height: 64px;
+    height: var(--navbar-height);
+    background-color: var(--navbar-bg-color);
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 
 }
+
 .navbar-container {
     display: flex;
     justify-content: space-between;
     height: 100%;
     align-items: center;
-    flex-direction: row-reverse; /* This moves the logo to the right */
+    flex-direction: row-reverse;
+    /* This moves the logo to the right */
 }
 
 .navbar-item {
-margin: 0.4em;
-width: 100%;
+    margin: 0.4em;
+    width: 100%;
 }
 
 .home-link,
 .navbar-link {
-    font-family: var(--secondary-font); /* تعيين الخط الثانوي */
+    font-family: var(--secondary-font);
+    /* تعيين الخط الثانوي */
     color: var(--navbar-text-color);
     text-decoration: none;
     display: flex;
@@ -59,126 +67,141 @@ width: 100%;
 }
 
 .home-link:is(:focus, :hover) {
-color: var(--navbar-text-color-focus);
+    color: var(--navbar-text-color-focus);
 }
 
 .navbar-link {
-justify-content: center;
-width: 100%;
-padding: 0.4em 0.8em;
-border-radius: 5px;
+    justify-content: center;
+    width: 100%;
+    padding: 0.4em 0.8em;
+    border-radius: 5px;
 }
 
 .navbar-link:is(:focus, :hover) {
-color: var(--navbar-text-color-focus);
-background-color: var(--navbar-bg-contrast);
+    color: var(--navbar-text-color-focus);
+    background-color: var(--navbar-bg-contrast);
 }
+
 .navbar-logo {
-background-color: var(--navbar-text-color-focus);
-border-radius: 50%;
-width: 30px;
-height: 30px;
-margin-right: 0.5em;
+    background-color: var(--navbar-text-color-focus);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5em;
 }
+
 #navbar-toggle {
-cursor: pointer;
-border: none;
-background-color: transparent;
-width: 40px;
-height: 40px;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
 .icon-bar {
-display: block;
-width: 25px;
-height: 4px;
-margin: 2px;
-background-color: var(--navbar-text-color);
-}
-#navbar-toggle:is(:focus, :hover) .icon-bar {
-background-color: var(--navbar-text-color-focus);
-}
-#navbar-toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) {
-position: absolute;
-margin: 0;
-width: 30px;
-}
-#navbar-toggle[aria-expanded="true"] .icon-bar:first-child {
-transform: rotate(45deg);
-}
-#navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(2) {
-opacity: 0;
-}
-#navbar-toggle[aria-expanded="true"] .icon-bar:last-child {
-transform: rotate(-45deg);
-}
-#navbar-menu {
-position: fixed;
-top: var(--navbar-height);
-bottom: 0;
-opacity: 0;
-visibility: hidden;
-left: 0;
-right: 0;
-}
-#navbar-toggle[aria-expanded="true"] + #navbar-menu {
-background-color: rgba(0, 0, 0, 0.4);
-opacity: 1;
-visibility: visible;
-}
-.navbar-links {
-list-style: none;
-position: absolute;
-z-index: 1000px;
-background-color: var(--navbar-bg-color);
-display: flex;
-flex-direction: column;
-align-items: center;
-left: 0;
-right: 0;
-margin: 1.4rem;
-border-radius: 5px;
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-#navbar-toggle[aria-expanded="true"] + #navbar-menu .navbar-links {
-padding: 1em;
-}
-@media screen and (min-width: 700px) {
-#navbar-toggle,
-#navbar-toggle[aria-expanded="true"] {
-    display: none;
-}
-
-#navbar-menu,
-#navbar-toggle[aria-expanded="true"] #navbar-menu {
-    visibility: visible;
-    opacity: 1;
-    position: static;
     display: block;
-    height: 100%;
+    width: 25px;
+    height: 4px;
+    margin: 2px;
+    background-color: var(--navbar-text-color);
 }
 
-.navbar-links,
-#navbar-toggle[aria-expanded="true"] #navbar-menu .navbar-links {
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
-    position: static;
-    flex-direction: row;
-    width: 135%;
-    height: 100%;
+#navbar-toggle:is(:focus, :hover) .icon-bar {
+    background-color: var(--navbar-text-color-focus);
 }
+
+#navbar-toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) {
+    position: absolute;
+    margin: 0;
+    width: 30px;
+}
+
+#navbar-toggle[aria-expanded="true"] .icon-bar:first-child {
+    transform: rotate(45deg);
+}
+
+#navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(2) {
+    opacity: 0;
+}
+
+#navbar-toggle[aria-expanded="true"] .icon-bar:last-child {
+    transform: rotate(-45deg);
+}
+
+#navbar-menu {
+    position: fixed;
+    top: var(--navbar-height);
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+#navbar-toggle[aria-expanded="true"]+#navbar-menu {
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar-links {
+    list-style: none;
+    position: absolute;
+    z-index: 1000px;
+    background-color: var(--navbar-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+    right: 0;
+    margin: 1.4rem;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#navbar-toggle[aria-expanded="true"]+#navbar-menu .navbar-links {
+    padding: 1em;
+}
+
+@media screen and (min-width: 700px) {
+
+    #navbar-toggle,
+    #navbar-toggle[aria-expanded="true"] {
+        display: none;
+    }
+
+    #navbar-menu,
+    #navbar-toggle[aria-expanded="true"] #navbar-menu {
+        visibility: visible;
+        opacity: 1;
+        position: static;
+        display: block;
+        height: 100%;
+    }
+
+    .navbar-links,
+    #navbar-toggle[aria-expanded="true"] #navbar-menu .navbar-links {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        position: static;
+        flex-direction: row;
+        width: 135%;
+        height: 100%;
+    }
 }
 
 /* التنسيق الأساسي */
 .dropdown-menu {
     list-style: none;
     position: absolute;
-    display: none; /* إخفاء القائمة المنسدلة بشكل افتراضي */
+    display: none;
+    /* إخفاء القائمة المنسدلة بشكل افتراضي */
     flex-direction: column;
     padding: 0;
     margin-top: 0.5rem;
@@ -217,8 +240,12 @@ padding: 1em;
         padding: 0.6rem 1.2rem;
     }
 }
+
 .logo {
-    width: 80px; /* Adjust the width as needed */
-    height: 80px; /* Keep height consistent to preserve ratio */
-    margin-left: 1em; /* Adjust spacing from the left, as the logo is now on the right */
+    width: 80px;
+    /* Adjust the width as needed */
+    height: 80px;
+    /* Keep height consistent to preserve ratio */
+    margin-left: 1em;
+    /* Adjust spacing from the left, as the logo is now on the right */
 }
