@@ -20,13 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
     button.style.display = userRole !== "admin" ? "none" : "block";
   });
 
-  links.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      const target = link.getAttribute("data-target");
-      showSection(target);
-    });
-  });
+  // links.forEach((link) => {
+  //   link.addEventListener("click", function (event) {
+  //     event.preventDefault();
+  //     const target = link.getAttribute("data-target");
+  //     showSection(target);
+  //   });
+  // });header-text
 
   // Show the first section by default
   if (sections.length > 0) {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchUploadedDocsByType(firstSectionId);
 
   function fetchUploadedDocsByType(type) {
-    fetch(`http://localhost:5001/docs/type/${type}`) // Adjust URL to match your backend
+    fetch(`https://malath-backend.almalath.ps/docs/type/${type}`) // Adjust URL to match your backend
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       commentSection.classList.add("comment-section");
 
-      fetch(`http://localhost:5001/comments/doc/${doc.id}`)
+      fetch(`https://malath-backend.almalath.ps/comments/doc/${doc.id}`)
         .then((response) => {
           return response.json();
         })
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
       commentButton.addEventListener("click", function () {
         const commentText = commentTextarea.value;
         if (commentText) {
-          fetch(`http://localhost:5001/comments`, {
+          fetch(`https://malath-backend.almalath.ps/comments`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -233,7 +233,7 @@ function uploadFile(sectionId, formId) {
     // );
 
     // Send file to the backend via POST request
-    fetch("http://localhost:5001/docs/upload", {
+    fetch("https://malath-backend.almalath.ps/docs/upload", {
       method: "POST",
       body: formData,
     })

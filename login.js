@@ -48,13 +48,16 @@ async function signup(event) {
 
   if (regMessage.textContent === "") {
     try {
-      const response = await fetch("http://localhost:5001/users/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username: name, email, password }),
-      });
+      const response = await fetch(
+        "https://malath-backend.almalath.ps/users/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username: name, email, password }),
+        }
+      );
 
       const data = await response.json();
 
@@ -119,13 +122,16 @@ async function login(event) {
 
   if (loginMessage.textContent === "") {
     try {
-      const response = await fetch("http://localhost:5001/users/signin", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        "https://malath-backend.almalath.ps/users/signin",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       const data = await response.json();
 

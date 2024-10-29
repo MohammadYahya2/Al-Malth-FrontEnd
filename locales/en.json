@@ -118,7 +118,7 @@
                     "whatsapp": "https://wa.me/yourphonenumber",
                     "telegram": "https://t.me/yourprofile"
                 },
-                "phone_number": "0595253709"
+                "phone_number": "0597544333"
             }
         ],
         "description": "At Al-Malaz Law Office, we offer you a team of specialized lawyers to ensure the best results in every case. We are here to support you and provide the legal advice you need."
@@ -134,32 +134,26 @@
         "phone": "Phone Number",
         "message": "Message",
         "send_message": "Send Message"
+    },
+    "home": {
+        "heading": "Welcome",
+        "subheading": "Your Trusted Legal Advisors",
+        "description": "We offer outstanding legal advisory services to help you navigate your legal challenges with confidence and ease. Our team of experienced lawyers is here to provide you with personalized and effective legal advice.",
+        "services_btn": "Our Services",
+        "contact_btn": "Contact Us"
+    },
+    "services": {
+        "title": "Our",
+        "legal": "Legal Services",
+        "service1": {
+            "title": "Legal Consultations",
+            "description": "We provide comprehensive legal support to ensure stability and legal security, with the resolution and prevention of legal disputes.",
+            "readmore": "Read More"
+        },
+        "service2": {
+            "title": "Civil Lawsuits",
+            "description": "Our specialization in civil disputes includes providing swift legal procedures in commercial and tax disputes.",
+            "readmore": "Read More"
+        }
     }
-    ,
-        "home": {
-            "heading": "Welcome",
-            "subheading": "Your Trusted Legal Advisors",
-            "description": "We offer outstanding legal advisory services to help you navigate your legal challenges with confidence and ease. Our team of experienced lawyers is here to provide you with personalized and effective legal advice.",
-            "services_btn": "Our Services",
-            "contact_btn": "Contact Us"
-        }
-        ,
-            "services": {
-                "title": "Our",
-                "legal": "Legal Services",
-                "service1": {
-                    "title": "Legal Consultations",
-                    "description": "We provide comprehensive legal support to ensure stability and legal security, with the resolution and prevention of legal disputes.",
-                    "readmore": "Read More"
-                },
-                "service2": {
-                    "title": "Civil Lawsuits",
-                    "description": "Our specialization in civil disputes includes providing swift legal procedures in commercial and tax disputes.",
-                    "readmore": "Read More"
-                }
-            }
-        }
-        
-    
-    
-
+}

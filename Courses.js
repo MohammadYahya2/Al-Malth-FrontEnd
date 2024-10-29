@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 // Function to fetch and display courses
 async function displayCourses() {
   try {
-    const response = await fetch("http://localhost:5001/courses", {
+    const response = await fetch("https://malath-backend.almalath.ps/courses", {
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem("currentUser"))?.token
@@ -70,7 +70,7 @@ async function displayCourses() {
           if (confirmDelete) {
             try {
               const response = await fetch(
-                `http://localhost:5001/courses/${courseId}`,
+                `https://malath-backend.almalath.ps/courses/${courseId}`,
                 {
                   method: "DELETE",
                   headers: {
@@ -144,7 +144,7 @@ document.getElementById("new-course-form").onsubmit = async function (event) {
 
   // Send course data to backend API
   try {
-    const response = await fetch("http://localhost:5001/courses", {
+    const response = await fetch("https://malath-backend.almalath.ps/courses", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
