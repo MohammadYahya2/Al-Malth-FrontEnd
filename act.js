@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function () {
   i18next.use(i18nextHttpBackend).init(
     {
-      lng: localStorage.getItem("selectedLang") || "en", // اللغة الافتراضية
+      lng: localStorage.getItem("selectedLang") || "ar", // اللغة الافتراضية
       backend: {
         loadPath: "/locales/{{lng}}.json",
       },
@@ -170,66 +170,6 @@ $(document).ready(function () {
     changeLanguage(lang);
   });
 });
-// document.addEventListener("DOMContentLoaded", function() {
-//     const loginForm = document.querySelector(".signinBx form");
-//     const registerForm = document.querySelector(".signupBx form");
-
-//     loginForm.addEventListener("submit", function(event) {
-//         event.preventDefault();
-//         const username = loginForm.querySelector("input[type='text']").value;
-//         const password = loginForm.querySelector("input[type='password']").value;
-
-//         fetch('login.php', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify({ username: username, password: password })
-//         })
-//         .then(response => response.json())
-//         .then(data => {
-//             if (data.success) {
-//                 alert("Login successful!");
-//                 document.querySelector("#userDropdown").textContent = data.username;
-//                 window.location.href = "index.html"; // تعديل إلى الصفحة المطلوبة
-//             } else {
-//                 alert(data.message);
-//             }
-//         })
-//         .catch(error => console.error('Error:', error));
-//     });
-
-//     registerForm.addEventListener("submit", function(event) {
-//         event.preventDefault();
-//         const username = registerForm.querySelector("input[type='text']").value;
-//         const email = registerForm.querySelector("input[type='email']").value;
-//         const password = registerForm.querySelector("input[type='password']").value;
-//         const confirmPassword = registerForm.querySelector("input[type='password']").value;
-
-//         if (password !== confirmPassword) {
-//             alert("Passwords do not match!");
-//             return;
-//         }
-
-//         fetch('register.php', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify({ username: username, email: email, password: password })
-//         })
-//         .then(response => response.json())
-//         .then(data => {
-//             if (data.success) {
-//                 alert("Registration successful!");
-//                 toggleForm(); // تبديل النموذج إلى تسجيل الدخول
-//             } else {
-//                 alert(data.message);
-//             }
-//         })
-//         .catch(error => console.error('Error:', error));
-//     });
-// });
 
 function toggleForm() {
   const container = document.querySelector(".container");
