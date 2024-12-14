@@ -1,6 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:ital,wght@0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
 body {
-  font-family: "Tajawal", sans-serif;
+  font-family: 'Amiri', serif;
   background: #f4f4f9;
   color: #333;
   margin: 0;
@@ -51,7 +54,7 @@ h6,
 }
 
 .text-primary {
-  color: #1ee2e7;
+  color: #e7c711;
 }
 
 p {
@@ -75,6 +78,43 @@ a {
   text-align: none;
   color: #1ee2e7;
 }
+.test {
+  font-family: 'Cairo', sans-serif; /* استخدام خط Cairo */
+  font-size: 15px; /* حجم النص */
+  font-weight: 700; /* سمك النص */
+  color: #333; /* لون النص الأساسي */
+  line-height: 1.6; /* تباعد الأسطر لتحسين القراءة */
+  text-align: center; /* توسيط النص */
+  padding: 10px 20px;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease; /* انتقال سلس */
+}
+
+/* إضافة تأثير ظل خفيف */
+.test::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background-color: #ffd700; /* لون خط سفلي */
+  transform: translateX(-50%);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* تأثير عند التمرير */
+.test:hover {
+  color: #d4a017; /* لون النص عند التمرير */
+  transform: scale(1.05); /* تكبير النص قليلاً */
+}
+
+.test:hover::after {
+  width: 80%; /* تكبير الخط السفلي عند التمرير */
+}
+
 
 a:hover,
 a:focus,
@@ -147,25 +187,26 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  border-color: #1ee2e7;
-  background-color: #1ee2e7;
+  border-color: #eab806
+;
+  background-color: #eab806;
 }
 
 .btn-primary .badge {
-  color: #1ee2e7;
+  color: #eab806;
   background-color: #fff;
 }
 
 .btn-xl {
   padding: 20px 40px;
-  border-color: #1ee2e7;
+  border-color: #eab806;
   border-radius: 3px;
   text-transform: uppercase;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
-  color: #fff;
-  background-color: #1ee2e7;
+  color: #0b0b0b;
+  background-color: #eab806;
 }
 
 .btn-xl:hover,
@@ -262,6 +303,7 @@ fieldset[disabled] .btn-xl.active {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 2em;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .intro-heading {
@@ -306,6 +348,38 @@ header {
   overflow: hidden; /* لإخفاء الزوائد */
   z-index: -1; /* للتأكد من بقاء الفيديو في الخلفية */
 }
+.desktop-video,
+.mobile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-image {
+  display: none;
+}
+
+/* الوضع الافتراضي */
+.desktop-video {
+  display: block;
+}
+
+.mobile-image {
+  display: none;
+}
+
+/* للشاشات الأقل من 768px */
+@media (max-width: 768px) {
+  .desktop-video {
+    display: none;
+  }
+  .mobile-image {
+    display: block;
+  }
+}
 
 .video-background video {
   min-width: 100%;
@@ -331,20 +405,22 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
   margin-bottom: 25px;
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Slab', serif;
   font-size: 22px;
   font-style: italic;
-  line-height: 22px;
+  line-height: 30px;
 }
 
 header .intro-text .intro-heading {
   margin-bottom: 25px;
   text-transform: uppercase;
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 50px;
+  font-family: 'Merriweather', serif;
+  font-size: 27px;
   font-weight: 700;
   line-height: 50px;
+ 
 }
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -360,44 +436,114 @@ header .intro-text .intro-heading {
   animation: fadeInUp 1s ease-in-out;
 }
 
+
+
+@media (max-width: 768px) {
+  header .intro-text .intro-lead-in {
+    margin-bottom: 302px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 30px;
+  }
+  header {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* يغطي كامل الشاشة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    
+  }
+  header .intro-text .intro-heading {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px; /* زوايا دائرية للتصميم */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+  }
+  .intro-lead-ino{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 2px; /* زوايا دائرية للتصميم */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+  }
+
+  header .intro-text {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    padding: 0 20px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%; /* يغطي كامل الارتفاع المتاح */
+  }
+
+  .btn-view-services {
+    margin-top: 20px;
+  }
+  
+}
+
+
+
 @media (min-width: 768px) {
   header .intro-text {
     padding-top: 143px;
     padding-bottom: 200px;
-  }
-  header .intro-text .intro-lead-in {
-    margin-bottom: 25px;
-    font-family: "Lora", serif;
-    font-size: 40px;
-    font-style: normal;
-    line-height: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    animation: fadeInUp 1s ease-in-out;
-  }
+}
 
-  header .intro-text .intro-heading {
+header .intro-text .intro-lead-in {
+    font-family: 'El Messiri', serif; /* خط رقعة */
+    font-size: 22px;
+    font-style: italic;
+    line-height: 30px;
+    color: #333;
+}
+
+.intro-lead-in {
+    font-family: 'El Messiri', serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+header .intro-text .intro-heading {
     margin-bottom: 50px;
     text-transform: uppercase;
-    font-family: "Cairo", "Montserrat", "Helvetica Neue", Helvetica, Arial,
-      sans-serif;
+    font-family: 'El Messiri', serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 75px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
     animation: fadeInUp 1.5s ease-in-out;
-  }
+}
 
-  header .intro-text .intro-lead-ino {
+header .intro-text .intro-lead-ino {
     margin-bottom: 50px;
     text-transform: uppercase;
-    font-family: "Cairo", "Montserrat", "Helvetica Neue", Helvetica, Arial,
-      sans-serif;
+    font-family: 'El Messiri', serif;
     font-size: 34px;
     font-weight: 700;
     line-height: 75px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
     animation: fadeInUp 2s ease-in-out;
-  }
+}
+
 
   .btn-custom {
     background-color: gold;

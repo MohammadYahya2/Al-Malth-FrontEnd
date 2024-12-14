@@ -9,6 +9,7 @@
       rel="stylesheet"
       id="bootstrap-css"
     />
+    <meta name="google-site-verification" content="ujBjkkQpKIW34I5L2-4r89NHLLcsOI0Ue7434bq2AGA" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link
@@ -37,7 +38,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&disply=swap"
       rel="stylesheet"
     />
 
@@ -89,12 +90,15 @@
     <!-- Navigation -->
     <!-- Header -->
     <header>
-      <div class="video-background">
-        <video autoplay loop muted>
-          <source src="assets/Lawyer Demo Video (1080p).mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+      <div class="video-background" id="videoSection">
+        <video id="myVideo" loop>
+            <source src="assets/Lawyer Demo Video (1080p).mp4" type="video/mp4" />
+            Your browser does not support the video tag.
         </video>
-      </div>
+        <img src="assets/top-view-career-guidance-items-judges.jpg" alt="Placeholder Image" class="mobile-image" />
+    </div>
+    
+    
       <div class="container">
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -199,18 +203,18 @@
         </nav>
 
         <div class="intro-text">
-          <div class="intro-lead-in" data-i18n="intro.lead_in">Al Malath</div>
-          <div class="intro-lead-ino" data-i18n="intro.welcome">
-            Welcome to the Malath Law Office
+          <div class="intro-lead-in"></div>
+          <div class="intro-lead-ino">
+            الملاذ<br>
+            مرحباً بكم في شركة الملاذ للمحاماة
           </div>
-          <div class="intro-heading" data-i18n="intro.heading">
-            We are here to protect your rights and defend your interests
+          <div class="intro-heading">
+            نحن هنا لحماية حقوقك والدفاع عن مصالحك
           </div>
           <a
             href="#services"
             class="page-scroll btn btn-xl btn-custom"
-            data-i18n="intro.btn_view_services"
-            >View our services</a
+            >استعرض خدماتنا</a
           >
         </div>
       </div>
@@ -229,8 +233,8 @@
           <div class="tag-container">
             <span class="tag tag-teal" data-i18n="news.card1.tag">Law</span>
           </div>
-          <h4 data-i18n="news.card1.title">
-            Important Legal Updates in Privacy Law
+          <h4  class="test">
+      الملاذ تنطلق إلكترونيًا لتواكب متطلبات المرحلة وتعزيز التواصل مع الموكلين
           </h4>
           <!-- <p data-i18n="news.card1.description">
             The Supreme Court recently issued decisions that significantly
@@ -262,8 +266,9 @@
               >Popular</span
             >
           </div>
-          <h4 data-i18n="news.card2.title">
-            Strategies to Reduce Professional Stress
+          <h4 class="test" >
+            عودة انتظام العمل في المحاكم اعتباراً من 1 سبتمبر 2024
+
           </h4>
           <!-- <p data-i18n="news.card2.description">
             Learn the best ways to deal with stress and anxiety related to your
@@ -293,8 +298,8 @@
           <div class="tag-container">
             <span class="tag tag-pink" data-i18n="news.card3.tag">Tips</span>
           </div>
-          <h4 data-i18n="news.card3.title">
-            Best Practices to Improve Your Efficiency as a Lawyer
+          <h4 class="test">
+            تعليق أوامر الحبس في ظل الظروف الراهنة
           </h4>
           <!-- <p data-i18n="news.card3.description">
             Practical tips to enhance your skills and increase your professional
@@ -329,10 +334,10 @@
           </video>
         </div>
         <div class="text-container">
-          <h1 data-i18n="legal_support.heading">
-            مكتب المحاماة <span class="highlight">الملاذ</span>
+          <h1 class="test">
+            شركة المحاماة<span class="highlight">الملاذ</span>
           </h1>
-          <p data-i18n="legal_support.description">
+          <p class="test">
             نقدم لعملائنا دعم قانوني شامل لتحقيق الأمان والاستقرار القانوني وذلك
             للدعم القانوني قبل نشوء النزاعات وتسوية المنازعات الدولية التي يمكن
             أن تثار في القانون أو عن العمل أو أي علاقة تعاقدية أمام الجهات
@@ -482,7 +487,7 @@
             <small
               class="text-uppercase"
               style="color: #000000; font-size: 3em"
-              data-i18n="about.title"
+              data-i18n="about.title"class="test"
               >تعرف علينا</small
             >
           </div>
@@ -493,14 +498,14 @@
               data-i18n="about.we_are_here"
               class="news-header"
             >
-              نحن هنا <span style="color: #244a89">لمساعدتك!</span>
+              نحن هنا <span style="color: #244a89" class="test">لمساعدتك!</span>
             </h1>
             <p
-              class="text-secondary"
+            
               style="line-height: 2; font-size: 1.2em"
-              data-i18n="about.description1"
+              class="test"
             >
-              تأسس مكتب المحاماة الملاذ في عام 2010 بهدف تقديم خدمات قانونية
+              تأسس مكتب المحاماة الملاذ في عام 2003 بهدف تقديم خدمات قانونية
               شاملة ومتكاملة لعملائنا. يتميز مكتبنا بفريق من المحامين ذوي الخبرة
               والكفاءة العالية في مختلف مجالات القانون. نحن ملتزمون بتقديم أفضل
               الحلول القانونية لعملائنا من خلال تحليل دقيق وفهم عميق لقضاياهم.
@@ -554,9 +559,9 @@
               نحن هنا <span style="color: #244a89">لمساعدتك!</span>
             </h1>
             <p
-              class="text-secondary"
+             
               style="line-height: 2; font-size: 1.2em"
-              data-i18n="about.description2"
+              class="test"
             >
               على مر السنوات، حصل مكتب المحاماة الملاذ على العديد من الجوائز
               والتقديرات في مجال القانون. نفتخر بمساهمتنا في العديد من القضايا
@@ -570,7 +575,7 @@
               class="btn-custom-m mt-4"
               data-i18n="about.btn_view_services"
             >
-              <span>اطلع على خدماتنا</span>
+              <span >اطلع على خدماتنا</span>
               <svg
                 width="25px"
                 fill="currentColor"
@@ -637,11 +642,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading" data-i18n="team.title">
+            <h2  class="test">
               عبد الله ابو صاع
             </h2>
             <h3 class="section-subheading text-muted" data-i18n="team.subtitle">
-              مدير الشركة ومحامي متخصص في القضايا المدنية
+            مدير الشركة ومحامي متخصص في مختلف القضايا
             </h3>
           </div>
         </div>
@@ -652,7 +657,7 @@
                 <img
                   src="assets\avos.jpeg"
                   class="img-responsive img-circle"
-                  alt="يوسف أبو الصاع"
+                 alt="يوسف أبو صاع
                 />
               </div>
               <div class="team-info">
@@ -685,7 +690,7 @@
                     ></a>
                   </li>
                 </ul>
-                <p class="phone-number" data-i18n="team.members.0.phone_number">
+                <p class="phone-number" >
                   رقم الهاتف: 0597544333
                 </p>
               </div>
@@ -694,7 +699,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
-            <p class="large text-muted" data-i18n="team.description">
+            <p class="test" >
               نحن في مكتب المحاماة الملاذ نقدم لك فريقاً من المحامين المتخصصين
               لضمان أفضل النتائج في كل قضية. نحن هنا لدعمك وتقديم المشورة
               القانونية التي تحتاجها.
@@ -999,6 +1004,7 @@
 
     <script src="login.js"></script>
     <script src="act.js"></script>
+    <script src="video.js"></script>
     <!-- jQuery Version 1.11.0 -->
     <script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/jquery-1.11.0.js"></script>
 
